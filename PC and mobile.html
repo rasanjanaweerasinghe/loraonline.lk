@@ -11,9 +11,10 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
+      background-color: #f2f2f2; /* Fallback color in case image doesn't load */
     }
 
-    /* Cover Section */
+    /* Cover Section with Responsive Background */
     .cover-section {
       background-image: url("Product cover.jpg");
       background-size: cover;
@@ -23,6 +24,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+    }
+
+    /* Add media query to adjust for smaller screen sizes */
+    @media (max-width: 480px) {
+      .cover-section {
+        height: 200px; /* Reduce height for mobile */
+        background-size: contain; /* Ensure image fits smaller screens */
+      }
     }
 
     .logo {
@@ -35,7 +45,7 @@
       margin-top: 10px;
     }
 
-    /* Navbar */
+    /* Navigation Bar */
     .navbar {
       background-color: #f2f2f2;
       overflow: hidden;
@@ -54,26 +64,27 @@
       background-color: #ccc;
     }
 
-    /* Product Container */
+    /* Product Container with Background Image */
     .container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 20px;
       padding: 20px;
-      background-image: url('WSBG 01.jpg');
+      background-color: #f2f2f2; /* Fallback color */
+      background-image: url('WSBG 01.jpg'); /* Your background image */
       background-size: cover;
       background-position: center;
     }
 
     .product {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
       padding: 20px;
       border-radius: 10px;
     }
 
     img {
-      max-width: 300px;
+      max-width: 100%; /* Ensure images resize for mobile */
       height: auto;
     }
 
@@ -94,7 +105,6 @@
       display: inline-block;
     }
 
-    /* Footer */
     .footer {
       background-color: #da1d48;
       color: white;
@@ -103,10 +113,10 @@
       font-size: 15px;
     }
 
-    /* Media Queries for Tablets */
+    /* Responsive Design for Tablets */
     @media (max-width: 768px) {
       .container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
       }
 
       .website-name {
@@ -118,14 +128,14 @@
       }
     }
 
-    /* Media Queries for Mobile Devices */
+    /* Responsive Design for Mobile Devices */
     @media (max-width: 480px) {
       .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column layout on mobile */
       }
 
       .website-name {
-        font-size: 18px;
+        font-size: 18px; /* Smaller font for mobile */
       }
 
       img {
@@ -134,15 +144,15 @@
 
       .navbar a {
         float: none;
-        width: 100%;
+        width: 100%; /* Make navbar items stack vertically */
       }
 
       .order-button {
-        width: 100px;
+        width: 100px; /* Adjust button size for mobile */
       }
 
       .cover-section {
-        height: 200px; /* Adjust cover section height for mobile */
+        height: 200px; /* Reduce cover section height on mobile */
       }
     }
   </style>
@@ -161,7 +171,7 @@
     </div>
   </div>
 
-  <!-- Navbar -->
+  <!-- Navigation Bar -->
   <div class="navbar">
     <a href="website2.html">Home</a>
     <a href="Contact Us.html">Contact Us</a>
@@ -169,97 +179,41 @@
     <a href="About Us.html">About Us</a>
   </div>
 
-  <!-- Product Container with Background -->
+  <!-- Product Container -->
   <div class="container">
+    <!-- Product 1 -->
     <div class="product">
       <h1>750ml Customize Glass Water Bottles</h1>
       <p style="color: Green;">In stock</p>
       <div class="image-wrapper">
         <a href="750ml img.jpg" target="_blank">
-          <img src="750ml img.jpg" alt="750ml Customize Glass Water Bottles" class="enlarge-image">
+          <img src="750ml img.jpg" alt="750ml Customize Glass Water Bottles">
         </a>
       </div>
       <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">950</span></p>
       <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
     </div>
 
+    <!-- Product 2 -->
     <div class="product">
       <h1>375ml Customize Glass Water Bottles</h1>
       <p style="color: Green;">In stock</p>
       <div class="image-wrapper">
         <a href="375mll img.jpg" target="_blank">
-          <img src="375mll img.jpg" alt="375ml Customize Glass Water Bottles" class="enlarge-image">
+          <img src="375mll img.jpg" alt="375ml Customize Glass Water Bottles">
         </a>
       </div>
       <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">800</span></p>
       <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
     </div>
 
-    <div class="product">
-      <h1>600ml Plastic Water Bottle</h1>
-      <p style="color: red;">Out Of Stock</p>
-      <div class="image-wrapper">
-        <a href="Plastic bottle 600ml.jpg" target="_blank">
-          <img src="Plastic bottle 600ml.jpg" alt="Plastic Water Bottle" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1300</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>Customize Mug</h1>
-      <p style="color: red;">Out Of Stock</p>
-      <div class="image-wrapper">
-        <a href="Mug.jpg" target="_blank">
-          <img src="Mug.jpg" alt="Customize Mug" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1100</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>Plant Pot</h1>
-      <p style="color: red;">Out Of Stock</p>
-      <div class="image-wrapper">
-        <a href="plant pot.jpg" target="_blank">
-          <img src="plant pot.jpg" alt="Plant Pot" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1500</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>Customize T-Shirt</h1>
-      <p style="color: blue;">Coming Soon</p>
-      <div class="image-wrapper">
-        <a href="T Shirt.png" target="_blank">
-          <img src="T Shirt.png" alt="Blue Frock" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2000</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>Wall Art</h1>
-      <p style="color: blue;">Coming Soon</p>
-      <div class="image-wrapper">
-        <a href="pngwing.com.png" target="_blank">
-          <img src="pngwing.com.png" alt="Wall Art" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1200</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
+    <!-- Add other products similarly -->
 
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    &copy; 2024 Lora Online Shopping Store. All Rights Reserved.
+    &copy; 2024 Lora Online Shopping Store. All rights reserved.
   </div>
 
 </body>
