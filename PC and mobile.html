@@ -13,6 +13,7 @@
       font-family: Arial, sans-serif;
     }
 
+    /* Cover Section */
     .cover-section {
       background-image: url("Product cover.jpg");
       background-size: cover;
@@ -34,6 +35,7 @@
       margin-top: 10px;
     }
 
+    /* Navbar */
     .navbar {
       background-color: #f2f2f2;
       overflow: hidden;
@@ -52,7 +54,7 @@
       background-color: #ccc;
     }
 
-    /* Add Background Image to Product Container */
+    /* Product Container */
     .container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -65,7 +67,7 @@
 
     .product {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.8); /* Adding a semi-transparent background for product items */
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 20px;
       border-radius: 10px;
     }
@@ -92,6 +94,7 @@
       display: inline-block;
     }
 
+    /* Footer */
     .footer {
       background-color: #da1d48;
       color: white;
@@ -103,11 +106,11 @@
     /* Media Queries for Tablets */
     @media (max-width: 768px) {
       .container {
-        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .website-name {
-        font-size: 20px; /* Reduce website name font size */
+        font-size: 20px;
       }
 
       .navbar a {
@@ -118,24 +121,28 @@
     /* Media Queries for Mobile Devices */
     @media (max-width: 480px) {
       .container {
-        grid-template-columns: 1fr; /* Single column layout on mobile */
+        grid-template-columns: 1fr;
       }
 
       .website-name {
-        font-size: 18px; /* Even smaller font size for mobile */
+        font-size: 18px;
       }
 
       img {
-        max-width: 100%; /* Ensure images resize to fit mobile screen */
+        max-width: 100%;
       }
 
       .navbar a {
         float: none;
-        width: 100%; /* Make navbar items stack vertically on mobile */
+        width: 100%;
       }
 
       .order-button {
-        width: 100px; /* Adjust button size for mobile */
+        width: 100px;
+      }
+
+      .cover-section {
+        height: 200px; /* Adjust cover section height for mobile */
       }
     }
   </style>
@@ -229,7 +236,7 @@
       <p style="color: blue;">Coming Soon</p>
       <div class="image-wrapper">
         <a href="T Shirt.png" target="_blank">
-          <img src="T Shirt.png" alt="Customize T-Shirt" class="enlarge-image">
+          <img src="T Shirt.png" alt="Blue Frock" class="enlarge-image">
         </a>
       </div>
       <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2000</span></p>
@@ -244,15 +251,15 @@
           <img src="pngwing.com.png" alt="Wall Art" class="enlarge-image">
         </a>
       </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2200</span></p>
+      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1200</span></p>
       <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
     </div>
 
   </div>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <div class="footer">
-    &copy; 2024 Lora Online Shopping Store. All rights reserved.
+    &copy; 2024 Lora Online Shopping Store. All Rights Reserved.
   </div>
 
 </body>
