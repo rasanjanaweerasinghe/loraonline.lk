@@ -237,16 +237,42 @@
     </div>
 
     <div class="product">
-      <h1>Wall Art</h1>
-      <p style="color: blue;">Coming Soon</p>
-      <div class="image-wrapper">
+    <h1>Wall Art</h1>
+    <p style="color: blue;">Coming Soon</p>
+    <div class="image-wrapper">
         <a href="pngwing.com.png" target="_blank">
-          <img src="pngwing.com.png" alt="Wall Art" class="enlarge-image">
+            <img src="pngwing.com.png" alt="Wall Art" class="enlarge-image">
         </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2200</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
     </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2200</span></p>
+    <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+</div>
+
+<style>
+    .image-wrapper {
+        display: inline-block;
+        margin: 20px 0;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .image-wrapper:hover {
+        /* Embossed effect when hovering over the product area */
+        box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .enlarge-image {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-wrapper:hover .enlarge-image {
+        /* Scale and enhance shadow of image when hovering */
+        transform: scale(1.05);
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    }
+</style>
+
 
   </div>
 
