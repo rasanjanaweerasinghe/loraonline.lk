@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results - Lora Online Shopping Store</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .results-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Search Results</h1>
+
+  <div class="results-container" id="results"></div>
+
+  <script>
+    const products = [
+      { name: "750ml Customize Glass Water Bottle", img: "750ml img.jpg" },
+      { name: "375ml Customize Glass Water Bottle", img: "375mll img.jpg" },
+      { name: "600ml Plastic Water Bottle", img: "Plastic bottle 600ml.jpg" },
+      { name: "Customize Mug", img: "Mug.jpg" },
+      { name: "Plant Pot", img: "plant pot.jpg" },
+      { name: "Customize T-Shirt", img: "T Shirt.png" },
+      { name: "Wall Art", img: "pngwing.com.png" }
+    ];
+
+    // Function to display search results
+    function displayResults(searchQuery) {
+      const resultsContainer = document.getElementById('results');
+      resultsContainer.innerHTML = ''; // Clear previous results
+
+      const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+      if (filteredProducts.length === 0) {
+        resultsContainer.innerHTML = '<p>No products found.</p>';
+        return;
+      }
+
+      filteredProducts.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('product');
+        productDiv.innerHTML = `
+          <h2>${product.name}</h2>
+          <img src="${product.img}" alt="${product.name}">
+          <p>Price: <span style="font-weight: bold;">Rs. 950</span></p>
+          <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+        `;
+        resultsContainer.appendChild(productDiv);
+      });
+    }
+
+    // Get the search query from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('query');
+
+    // Display results for the search query
+    if (searchQuery) {
+      displayResults(searchQuery);
+    } else {
+      document.getElementById('results').innerHTML = '<p>Please enter a search query.</p>';
+    }
+  </script>
+
+</body>
+
+</html>
