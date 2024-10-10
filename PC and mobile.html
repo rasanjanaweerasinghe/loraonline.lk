@@ -37,14 +37,20 @@
       margin-top: 10px;
     }
 
-    /* Glowing Effect */
+    /* Continuous Glowing Effect */
     .logo img {
-      transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transitions for effects */
+      animation: glow 1.5s infinite alternate; /* Apply animation */
     }
 
-    .logo img:hover {
-      transform: scale(1.1); /* Slightly increase size on hover */
-      filter: drop-shadow(0 0 10px rgba(219, 29, 73, 0.6)); /* Add glowing effect */
+    @keyframes glow {
+      0% {
+        filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
+        transform: scale(1);
+      }
+      100% {
+        filter: drop-shadow(0 0 15px rgba(219, 29, 73, 1));
+        transform: scale(1.05);
+      }
     }
 
     .navbar {
@@ -238,8 +244,8 @@
     </div>
 
     <div class="product">
-      <h1>600ml Plastic Water Bottle</h1>
-      <p style="color: Red;">Out of stock</p>
+      <h1>600ml Customize Glass Water Bottle</h1>
+      <p style="color: Green;">In stock</p>
       <div class="image-wrapper">
         <a href="600ml img.jpg" target="_blank">
           <img src="600ml img.jpg" alt="600ml Plastic Water Bottles" class="enlarge-image">
