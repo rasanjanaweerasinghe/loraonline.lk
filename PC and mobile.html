@@ -11,7 +11,6 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
- 
     }
 
     .cover-section {
@@ -24,10 +23,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column; /* Align items vertically */
     }
 
     .logo {
       text-align: center;
+      position: relative; /* For positioning the glow */
     }
 
     .website-name {
@@ -36,13 +37,28 @@
       margin-top: 10px;
     }
 
+    /* Continuous Glowing Effect */
+    .logo img {
+      animation: glow 1.5s infinite alternate; /* Apply animation */
+    }
+
+    @keyframes glow {
+      0% {
+        filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
+        transform: scale(1);
+      }
+      100% {
+        filter: drop-shadow(0 0 15px rgba(219, 29, 73, 1));
+        transform: scale(1.05);
+      }
+    }
+
     .navbar {
       background-color: #e0e0e0;
       overflow: hidden;
-      overflow: hidden;
-  position: absolute; /* or use 'fixed' if you want it to stay at the top when scrolling */
-  top: 5;
-  width: 100%;
+      position: absolute; /* or use 'fixed' if you want it to stay at the top when scrolling */
+      top: 5;
+      width: 100%;
     }
 
     .navbar a {
@@ -53,10 +69,9 @@
       padding: 5px 16px;
       text-decoration: none;
       font-family: 'Uni Sans Heavy Italic', sans-serif; /* Apply the font here */
-}
+    }
 
-   
- .navbar a:hover {
+    .navbar a:hover {
       background-color: #da1d48;
     }
 
@@ -147,6 +162,30 @@
         width: 100px; /* Adjust button size for mobile */
       }
     }
+
+    /* Image Hover Effects */
+    .image-wrapper {
+      display: inline-block;
+      margin: 20px 0;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .image-wrapper:hover {
+      /* Embossed effect when hovering over the product area */
+      box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .enlarge-image {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-wrapper:hover .enlarge-image {
+      /* Scale and enhance shadow of image when hovering */
+      transform: scale(1.05);
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    }
   </style>
 </head>
 
@@ -160,15 +199,13 @@
       </a>
       <h1 class="website-name">Lora Online Shopping Store</h1>
       <h2>Products</h2>
-  <!-- Search Bar Below Products -->
-<div class="search-container" style="display: flex; justify-content: center; align-items: center; margin: 20px auto; width: 100%; padding: 10px; background-color: #f5f5f5; border-radius: 50px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-  <form action="Search Bar.html" method="GET" style="display: flex; flex: 1; width: 100%;">
-    <input type="text" name="query" placeholder="Search for products..." class="search-bar" style="flex: 1; border: none; padding: 15px; font-size: 16px; border-radius: 50px; outline: none; margin-right: 10px; background-color: #ffffff;">
-    <button type="submit" class="search-button" style="background-color: #da1d48; border: none; padding: 15px 20px; border-radius: 50px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">Search</button>
-  </form>
-</div>
-
-</div>
+      <!-- Search Bar Below Products -->
+      <div class="search-container" style="display: flex; justify-content: center; align-items: center; margin: 20px auto; width: 100%; padding: 10px; background-color: #f5f5f5; border-radius: 50px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        <form action="Search Bar.html" method="GET" style="display: flex; flex: 1; width: 100%;">
+          <input type="text" name="query" placeholder="Search for products..." class="search-bar" style="flex: 1; border: none; padding: 15px; font-size: 16px; border-radius: 50px; outline: none; margin-right: 10px; background-color: #ffffff;">
+          <button type="submit" class="search-button" style="background-color: #da1d48; border: none; padding: 15px 20px; border-radius: 50px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">Search</button>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -207,39 +244,39 @@
     </div>
 
     <div class="product">
-      <h1>600ml Plastic Water Bottle</h1>
+      <h1>600ml Customize Glass Water Bottle</h1>
       <p style="color: red;">Out Of Stock</p>
       <div class="image-wrapper">
         <a href="Plastic bottle 600ml.jpg" target="_blank">
           <img src="Plastic bottle 600ml.jpg" alt="Plastic Water Bottle" class="enlarge-image">
         </a>
       </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1300</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">500</span></p>
+      <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
     </div>
 
     <div class="product">
-      <h1>Customize Mug</h1>
-      <p style="color: red;">Out Of Stock</p>
-      <div class="image-wrapper">
-        <a href="Mug.jpg" target="_blank">
-          <img src="Mug.jpg" alt="Customize Mug" class="enlarge-image">
+        <h1>Customize Mug</h1>
+        <p style="color: red;">Out Of Stock</p>
+        <div class="image-wrapper">
+            <a href="Mug.jpg" target="_blank">
+              <img src="Mug.jpg" alt="Customize Mug" class="enlarge-image">
         </a>
       </div>
       <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1100</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+      <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
     </div>
 
     <div class="product">
-      <h1>Plant Pot</h1>
-      <p style="color: red;">Out Of Stock</p>
-      <div class="image-wrapper">
-        <a href="plant pot.jpg" target="_blank">
-          <img src="plant pot.jpg" alt="Plant Pot" class="enlarge-image">
+        <h1>Plant Pot</h1>
+        <p style="color: red;">Out Of Stock</p>
+        <div class="image-wrapper">
+          <a href="plant pot.jpg" target="_blank">
+            <img src="plant pot.jpg" alt="Plant Pot" class="enlarge-image">
         </a>
       </div>
       <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1500</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+      <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
     </div>
 
     <div class="product">
@@ -255,50 +292,22 @@
     </div>
 
     <div class="product">
-    <h1>Wall Art</h1>
+      <h1>Wall Art</h1>
     <p style="color: blue;">Coming Soon</p>
     <div class="image-wrapper">
         <a href="pngwing.com.png" target="_blank">
             <img src="pngwing.com.png" alt="Wall Art" class="enlarge-image">
         </a>
-    </div>
-    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2200</span></p>
+      </div>
+      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2200</span></p>
     <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-</div>
-
-<style>
-    .image-wrapper {
-        display: inline-block;
-        margin: 20px 0;
-        transition: box-shadow 0.3s ease;
-    }
-
-    .image-wrapper:hover {
-        /* Embossed effect when hovering over the product area */
-        box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    .enlarge-image {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .image-wrapper:hover .enlarge-image {
-        /* Scale and enhance shadow of image when hovering */
-        transform: scale(1.05);
-        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
-    }
-</style>
-
-
+    </div>
   </div>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <div class="footer">
-    &copy; 2024 Lora Online Shopping Store. All rights reserved.
+    <p>&copy; 2024 Lora Online Shopping Store. All rights reserved.</p>
   </div>
-
 </body>
 
 </html>
