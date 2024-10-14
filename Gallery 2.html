@@ -1,87 +1,193 @@
-<head>
-  <meta charset="UTF-8">
-  <title>Lora Online Shopping Store</title>
-  <style>
-		/* Your existing CSS styles here */
+<!DOCTYPE html>
+<html lang="en">
 
-		h1 {
-			color: #db1d48; /* Set the color of the heading to #db1d48 */
-		}
-	</style>
-  <link rel="icon" href="Lora logo test png.png" type="lora logo white.png">
-  <style>
-    
-    
-}
-  </style>
-<!DOCTYPE html>
-<html>
 <head>
-  <title>My HTML Page</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    
-    .cover-section {
-      background-image: url("Gallery cover.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 300px; /* Adjust the height as needed */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .logo {
-      text-align: center;
-    }
-    
-    .website-name {
-      color: #db1d49;
-      font-size: 24px;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="cover-section">
-    <div class="logo">
-  <a href="website2.html">
-    <img src="Lora logo test png.png" alt="Lora Logo" width="200" height="200">
-  </a>
-      <h1 class="website-name">Lora Online Shopping Store</h1>
-      <h2 class="Gallery">Gallery</h2>
-      
-    </div>
-  </div>
-  
-  <!-- Rest of your HTML content goes here -->
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Shop Now</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lora Online Shopping Store</title>
     <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f7f9; /* Set background color */
+        }
+
+        h1 {
+            color: #db1d49;
+        }
+
+        /* Cover Section with Glowing Effect */
+        .cover-section {
+            background-image: url("Flower cover.png");
+            background-color: #f0dfd8;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* Align items vertically */
+        }
+
+        .logo {
+            text-align: center;
+            position: relative; /* For positioning the glow */
+        }
+
+        .website-name {
+            color: #db1d49;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        /* Continuous Glowing Effect */
+        .logo img {
+            animation: glow 1.5s infinite alternate; /* Apply animation */
+        }
+
+        @keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
+                transform: scale(1);
+            }
+            100% {
+                filter: drop-shadow(0 0 15px #61c5b7);
+                transform: scale(1.05);
+            }
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .navbar a {
+            float: left;
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 5px 16px;
+            text-decoration: none;
+            font-family: 'Uni Sans Heavy Italic', sans-serif;
+        }
+
+        .navbar a img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Product Styles */
+        .product {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .product p {
+            margin: 0;
+            font-size: 18px;
+            color: #302b2c;
+        }
+
+        .product button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #f21c51;
+            color: #ffffff;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #e3164c;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #f0dfd8;
+            border-top: 1px solid #ddd;
+            padding: 5px;
+            text-align: center;
+            color: #000000;
+        }
+
+        /* Slideshow Styles */
+        .slideshow-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+        }
+
+        .slideshow-image {
+            display: none;
+            width: 1900px;
+            height: auto;
+        }
+
+        .slideshow-image.active {
+            display: block;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .product {
+                width: 100%;
+            }
+        }
+
+        /* Blinking Button */
         @keyframes blink {
             0% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
         }
 
-        /* Add CSS styles to position the blinking button */
         #shop-now-button {
             position: absolute;
-            top: 170px;
+            top: 100px;
             left: 130px;
             z-index: 9999;
             padding: 10px 20px;
@@ -96,167 +202,42 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="cover-area">
-        <!-- Your cover area content goes here -->
+
+    <!-- Cover Section -->
+    <div class="cover-section">
+        <div class="logo">
+            <a href="website2.html">
+                <img src="Lora logo test png.png" alt="Lora Logo" width="200" height="200">
+            </a>
+            <h1 class="website-name">Lora Online Shopping Store</h1>
+        </div>
     </div>
 
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="website2.html">
+            <img src="website home page icon.png" alt="Home Icon"> Home
+        </a>
+        <a href="Contact Us.html">
+            <img src="website contact page icon.png" alt="Contact Us Icon"> Contact Us
+        </a>
+        <a href="PC and mobile.html">
+            <img src="website product icon.png" alt="Products Icon"> Products
+        </a>
+        <a href="Gallery 2.html">
+            <img src="website gallery page icon.png" alt="Gallery Icon"> Gallery
+        </a>
+        <a href="About Us.html">
+            <img src="website gallery page icon png.png" alt="About Us Icon"> About Us
+        </a>
+    </div>
+
+    <!-- Blinking Button -->
     <a href="PC and mobile.html" id="shop-now-button">Shop Now</a>
-</body>
-</html>
 
-
-   
-  </header>
-</body>
-    
-    
-</header>
-</body>
-
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-		
-		header {
-			background-color: #db1d49;
-			color: #fff;
-			padding: 10px;
-			text-align: center;
-		}
-		
-		h1 {
-			margin: 0;
-			font-size: 36px;
-		}
-		
-		nav {
-			background-color: #f2f2f2;
-			border: 1px solid #ddd;
-			padding: 10px;
-		}
-		
-		nav a {
-			display: inline-block;
-			padding: 10px;
-			text-decoration: none;
-			color: #333;
-		}
-		
-		nav a:hover {
-			background-color: #ddd;
-		}
-		
-		.container {
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-		
-		.product {
-			display: inline-block;
-			width: 300px;
-			margin: 20px;
-			border: 1px solid #ddd;
-			padding: 10px;
-			text-align: center;
-		}
-		
-		.product img {
-			max-width: 100%;
-			height: auto;
-			margin-bottom: 10px;
-		}
-		
-		.product h2 {
-			margin-top: 0;
-			font-size: 24px;
-		}
-		
-		.product p {
-			margin: 0;
-			font-size: 18px;
-			color: #302b2c;
-		}
-		
-		.product button {
-			display: black;
-			margin: 10px auto;
-			padding: 10px 20px;
-			background-color: #f21c51;
-			color: #000000;
-			border: none;
-			font-size: 18px;
-			cursor: pointer;
-		}
-		
-		.product button:hover {
-			background-color: #ffffff;
-		}
-		
-		footer {
-			background-color: #f21c51;
-			border-top: 1px solid #ddd;
-			padding: 10px;
-			text-align: center;
-			color: #302b2c;
-		}
-		
-		@media (max-width: 768px) {
-			.product {
-				width: 100%;
-			}
-		}
-footer {
-      background-color: #da1d48;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px
-	</style>
-</head>
-</header>
-	<nav>
-		<a href="website2.html">Home</a>
-		<a href="Contact Us.html">Contact Us</a>
-		<a href="PC and mobile.html">Products</a>
-                <a href="About Us.html">About Us</a>
-                
-                
-	</nav>
-	
-	<style>
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .product {
-        flex: 1;
-        margin: 10px;
-        text-align: center;
-    }
-</style>
-<style>
-  a.whatsapp {
-    color: #ffffff; /* white color code */
-  }
-</style>
-
-<div class="container">
-    <div class="product">
-
-<html>
-
-	</style>
-</head>
-<body>
-
-<div class="gallery">
+    <div class="gallery">
       <img src="gallery-image-1.jpg" alt="Gallery Image 1">
       <img src="gallery-image-2.jpg" alt="Gallery Image 2">
       <img src="gallery-image-3.jpg" alt="Gallery Image 3">
@@ -268,17 +249,59 @@ footer {
       <img src="gallery-image-9.jpg" alt="Gallery Image 9">
       <img src="gallery-image-10.jpg" alt="Gallery Image 10">
       <img src="gallery-image-11.jpg" alt="Gallery Image 11">
-    </div>
+  </div>
+  
+  <style>
+      .gallery {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+          gap: 10px; /* Space between images */
+          padding: 10px; /* Padding around the grid */
+      }
+  
+      .gallery img {
+          width: 100%; /* Ensure images take full width of their grid cell */
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 5px; /* Optional: Add rounded corners */
+          transition: transform 0.2s; /* Animation for hover effect */
+      }
+  
+      .gallery img:hover {
+          transform: scale(1.05); /* Slight zoom on hover */
+      }
+  </style>
+  
 </html>
 <h4>Explore more images on our social media accounts. Connect with us on Facebook and Instagram for a visual feast of our latest creations!</h4>
-<a href="https://www.facebook.com/loraonlineshopping.lk" style="color: black;">
-        <img src="facebook-icon.png" alt="Facebook Icon" width="24" height="24">
-        Visit us on Facebook
+<!-- Footer -->
+<footer>
+  <p>© 2024 Lora Online Shopping Store. All rights reserved.</p>
+  <p>
+      <img src="call-icon.png" alt="Call Icon" width="24" height="24">
+      <a href="tel:+94764178885" style="color: rgb(0, 0, 0);">+94764178885</a>
+  </p>
+  <p>
+      <img src="whatsapp-icon.png" alt="WhatsApp Icon" width="24" height="24">
+      <a href="https://wa.me/94705011212?text=Hello%21%20I%20have%20a%20question." style="color: rgb(0, 0, 0);">+94705011212</a>
+  </p>
+  <p>
+      <a href="https://www.facebook.com/loraonlineshopping.lk" style="color: rgb(0, 0, 0);">
+          <img src="facebook-icon.png" alt="Facebook Icon" width="24" height="24"> Visit us on Facebook
       </a>
-      <a href="https://www.instagram.com/loraonlineshopping.lk/" style="color: black;">
-        <img src="instagram-icon.png" alt="Instagram Icon" width="24" height="24">
-        Visit us on Instagram
+  </p>
+  <p>
+      <a href="https://www.instagram.com/loraonlineshopping.lk/" style="color: rgb(0, 0, 0);">
+          <img src="instagram-icon.png" alt="Instagram Icon" width="24" height="24"> Visit us on Instagram
       </a>
- <footer>© 2024 Lora Online Shopping Store. All rights reserved</footer>
-</body>
-</html>
+  </p>
+  <p>
+      <img src="google-maps-icon.png" alt="Google Maps Icon" width="24" height="24">
+      <a href="https://www.google.com/maps/search/?api=1&query=614%2F2%2FC+Daranagama%2C+Delgoda" target="_blank" style="color: rgb(0, 0, 0);">
+          Address: 614/2/C Daranagama, Delgoda
+      </a>
+  </p>
+  <p>
+      <img src="gmail-icon.png" alt="Gmail Icon" width="24" height="24">
+      <a href="mailto:lorafamily.lk@gmail.com" style="color: rgb(0, 0, 0);">lorafamily.lk@gmail.com</a>
+  </p>
+</footer>
