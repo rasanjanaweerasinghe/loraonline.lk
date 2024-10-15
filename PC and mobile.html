@@ -53,34 +53,49 @@
       }
     }
 
-   /* Navbar Styles */
-   .navbar {
-            background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
-            overflow: hidden;
-            text-align: center;
-        }
+ /* Navbar Styles */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    text-align: center;
+}
 
-        .navbar a {
-            float: left;
-            display: inline-block;
-            color: black;
-            text-align: center;
-            padding: 5px 16px;
-            text-decoration: none;
-            font-family: 'Uni Sans Heavy Italic', sans-serif;
-        }
+.navbar a {
+    float: left;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-family: 'Uni Sans Heavy Italic', sans-serif;
+}
 
-        .navbar a img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-            margin-right: 2px;
-        }
+.navbar a img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px; /* Add space between icon and text */
+}
 
-        .navbar a:hover {
-            background-color: #ddd;
-        }
+.navbar a:hover {
+    background-color: #ddd;
+}
+
+/* Mobile Version - Fix Spacing Issue */
+@media (max-width: 480px) {
+    .navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        padding: 10px 0; /* Adjust padding for more space */
+        text-align: center;
+    }
+
+    .navbar a img {
+        margin-right: 10px; /* Increase space between icon and text for better readability */
+    }
+}
     /* Add Background Image to Product Container */
     .container {
       display: grid;
