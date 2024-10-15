@@ -2,298 +2,299 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lora Online Shopping Store</title>
-  <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lora Online Shopping Store</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f6f7f9;
+        }
 
-    .cover-section {
-      background-image: url("Flower cover.png");
-      background-color: #f0dfd8;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
+        /* Cover Section with Glowing Effect */
+        .cover-section {
+            background-image: url("Flower cover.png");
+            background-color: #f0dfd8;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
 
-    .logo {
-      text-align: center;
-      position: relative;
-    }
+        .logo {
+            text-align: center;
+            position: relative;
+        }
 
-    .website-name {
-      color: #db1d49;
-      font-size: 24px;
-      margin-top: 10px;
-    }
+        .website-name {
+            color: #db1d49;
+            font-size: 24px;
+            margin-top: 10px;
+        }
 
-    /* Continuous Glowing Effect */
-    .logo img {
-      animation: glow 1.5s infinite alternate;
-    }
+        /* Continuous Glowing Effect */
+        .logo img {
+            animation: glow 1.5s infinite alternate;
+        }
 
-    @keyframes glow {
-      0% {
-        filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
-        transform: scale(1);
-      }
-      100% {
-        filter: drop-shadow(0 0 15px rgba(219, 29, 73, 1));
-        transform: scale(1.05);
-      }
-    }
+        @keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
+                transform: scale(1);
+            }
 
-    /* Navbar Styles */
-    .navbar {
-      background-color: #ffffff;
-      overflow: hidden;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap; /* Wrap items to new rows */
-      justify-content: center; /* Center items horizontally */
-    }
+            100% {
+                filter: drop-shadow(0 0 15px rgba(219, 29, 73, 1));
+                transform: scale(1.05);
+            }
+        }
 
-    .navbar a {
-      display: flex;
-      align-items: center;
-      color: black;
-      padding: 5px 16px;
-      text-decoration: none;
-      font-family: 'Uni Sans Heavy Italic', sans-serif;
-    }
+        /* Navbar Styles */
+        .navbar {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Aligns the navbar to the left */
+    padding-left: 20px; /* Add some padding on the left */
+}
 
-    .navbar a img {
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
-    }
+.navbar a {
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-family: 'Uni Sans Heavy Italic', sans-serif;
+}
 
-    .navbar a:hover {
-      background-color: #da1d48;
-    }
+.navbar a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
 
-    /* Container Styles */
-    .container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 20px;
-      padding: 20px;
-      background-color: #f6f7f9;
-    }
+.navbar a:hover {
+    background-color: #da1d48;
+        }
 
-    .product {
-      text-align: center;
-      background-color: rgba(247, 231, 231, 0.8);
-      padding: 20px;
-      border-radius: 10px;
-    }
+        /* Container Styles */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
 
-    .product h1 {
-      color: black;
-      font-size: 19px;
-    }
+        .product {
+            text-align: center;
+            background-color: rgba(247, 231, 231, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
 
-    .product p {
-      font-size: 16px;
-    }
+        .product h1 {
+            color: black;
+            font-size: 19px;
+        }
 
-    .product img {
-      max-width: 100%;
-      height: auto;
-    }
+        .product p {
+            font-size: 16px;
+        }
 
-    .order-button {
-      background-color: #da1d48;
-      color: white;
-      width: 100px;
-      height: 30px;
-      border: none;
-      text-align: center;
-      text-decoration: none;
-      line-height: 30px;
-      display: inline-block;
-    }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    /* Footer */
-    .footer {
-      background-color: #f0dfd8;
-      color: rgb(0, 0, 0);
-      text-align: center;
-      padding: 15px;
-      font-size: 15px;
-    }
+        .order-button {
+            background-color: #da1d48;
+            color: white;
+            width: 100px;
+            height: 30px;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            line-height: 30px;
+            display: inline-block;
+        }
 
-    /* Image Hover Effects */
-    .image-wrapper {
-      margin: 20px 0;
-      transition: box-shadow 0.3s ease;
-    }
+        /* Footer */
+        .footer {
+            background-color: #f0dfd8;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 15px;
+            font-size: 15px;
+        }
 
-    .image-wrapper:hover {
-      box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
-    }
+        /* Image Hover Effects */
+        .image-wrapper {
+            margin: 20px 0;
+            transition: box-shadow 0.3s ease;
+        }
 
-    .enlarge-image {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .image-wrapper:hover {
+            box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+        }
 
-    .image-wrapper:hover .enlarge-image {
-      transform: scale(1.05);
-      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
-    }
+        .enlarge-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    /* Media Queries for Tablets */
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: repeat(2, 1fr);
-      }
+        .image-wrapper:hover .enlarge-image {
+            transform: scale(1.05);
+            box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+        }
 
-      .website-name {
-        font-size: 20px;
-      }
+        /* Media Queries for Tablets */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-      .navbar a {
-        padding: 12px 14px;
-      }
-    }
+            .website-name {
+                font-size: 20px;
+            }
 
-    /* Media Queries for Mobile Devices */
-    @media (max-width: 480px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
+            .navbar a {
+                padding: 12px 14px;
+            }
+        }
 
-      .website-name {
-        font-size: 18px;
-      }
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
 
-      .product p {
-        font-size: 14px; /* Ensure 'In Stock' tag displays on mobile */
-      }
+            .website-name {
+                font-size: 18px;
+            }
 
-      .navbar {
-        flex-direction: column; /* Stack navbar items vertically */
-        align-items: center;
-      }
+            .product p {
+                font-size: 14px;
+            }
 
-      .navbar a {
-        width: 100%;
-        text-align: center;
-        padding: 12px 0;
-      }
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
 
-      .order-button {
-        width: 120px;
-      }
-    }
-  </style>
+            .navbar a {
+                width: 100%;
+                text-align: center;
+                padding: 12px 0;
+            }
+
+            .order-button {
+                width: 120px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Cover Section -->
-  <div class="cover-section">
-    <div class="logo">
-      <a href="website2.html">
-        <img src="Lora logo test png.png" alt="Lora Logo" width="100" height="100">
-      </a>
-      <h1 class="website-name">Lora Online Shopping Store</h1>
-      <h2>Products</h2>
-      <!-- Search Bar -->
-      <div class="search-container" style="display: flex; justify-content: center; margin: 20px auto; width: 100%;">
-        <form action="Search Bar.html" method="GET" style="display: flex; flex: 1;">
-          <input type="text" name="query" placeholder="Search for products..." style="flex: 1; padding: 15px; font-size: 16px; border-radius: 50px; border: none; margin-right: 10px;">
-          <button type="submit" style="background-color: #da1d48; padding: 15px 20px; border-radius: 50px; color: white; font-size: 16px; border: none;">Search</button>
-        </form>
-      </div>
+    <!-- Cover Section -->
+    <div class="cover-section">
+        <div class="logo">
+            <a href="website2.html">
+                <img src="Lora logo test png.png" alt="Lora Logo" width="100" height="100">
+            </a>
+            <h1 class="website-name">Lora Online Shopping Store</h1>
+            <h2>Products</h2>
+
+            <!-- Search Bar -->
+            <div class="search-container" style="display: flex; justify-content: center; margin: 20px auto; width: 100%;">
+                <form action="Search Bar.html" method="GET" style="display: flex; flex: 1;">
+                    <input type="text" name="query" placeholder="Search for products..."
+                        style="flex: 1; padding: 15px; font-size: 16px; border-radius: 50px; border: none; margin-right: 10px;">
+                    <button type="submit"
+                        style="background-color: #da1d48; padding: 15px 20px; border-radius: 50px; color: white; font-size: 16px; border: none;">Search</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <a href="website2.html">
-      <img src="website home page icon.png" alt="Home Icon">
-      Home
-    </a>
-    <a href="Contact Us.html">
-      <img src="website contact page icon.png" alt="Contact Us Icon">
-      Contact Us
-    </a>
-    <a href="Gallery 2.html">
-      <img src="website gallery page icon.png" alt="Gallery Icon">
-      Gallery
-    </a>
-    <a href="About Us.html">
-      <img src="website gallery page icon png.png" alt="About Us Icon">
-      About Us
-    </a>
-  </div>
-
-  <!-- Product Container -->
-  <div class="container">
-    <div class="product">
-      <h1>750ml Customize Glass Water Bottle</h1>
-      <p style="color: Green;">In stock</p>
-      <div class="image-wrapper">
-        <a href="750ml img.jpg" target="_blank">
-          <img src="750ml img.jpg" alt="750ml Customize Glass Water Bottles" class="enlarge-image">
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="website2.html">
+            <img src="website home page icon.png" alt="Home Icon"> Home
         </a>
-      </div>
-      <p class="price">Price: Rs. <span style="font-weight: bold;">950</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>375ml Customize Glass Water Bottle</h1>
-      <p style="color: Green;">In stock</p>
-      <div class="image-wrapper">
-        <a href="375mll img.jpg" target="_blank">
-          <img src="375mll img.jpg" alt="375ml Customize Glass Water Bottles" class="enlarge-image">
+        <a href="Contact Us.html">
+            <img src="website contact page icon.png" alt="Contact Us Icon"> Contact Us
         </a>
-      </div>
-      <p class="price">Price: Rs. <span style="font-weight: bold;">800</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>600ml Customize Glass Water Bottle</h1>
-      <p style="color: red;">Out Of Stock</p>
-      <div class="image-wrapper">
-        <a href="Plastic bottle 600ml.jpg" target="_blank">
-          <img src="Plastic bottle 600ml.jpg" alt="Plastic Water Bottle" class="enlarge-image">
+        <a href="Gallery 2.html">
+            <img src="website gallery page icon.png" alt="Gallery Icon"> Gallery
         </a>
-      </div>
-      <p class="price">Price: Rs. <span style="font-weight: bold;">550</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>1L Customize Glass Water Bottle</h1>
-      <p style="color: Green;">In stock</p>
-      <div class="image-wrapper">
-        <a href="1l bottle.png" target="_blank">
-          <img src="1l bottle.png" alt="1L Customize Glass Water Bottles" class="enlarge-image">
+        <a href="About Us.html">
+            <img src="website gallery page icon png.png" alt="About Us Icon"> About Us
         </a>
-      </div>
-      <p class="price">Price: Rs. <span style="font-weight: bold;">1050</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    <p>Contact us at: <strong>loraonlinestore@example.com</strong></p>
-  </div>
+    <!-- Product Container -->
+    <div class="container">
+        <div class="product">
+            <h1>750ml Customize Glass Water Bottle</h1>
+            <p style="color: Green;">In stock</p>
+            <div class="image-wrapper">
+                <a href="750ml img.jpg" target="_blank">
+                    <img src="750ml img.jpg" alt="750ml Customize Glass Water Bottles" class="enlarge-image">
+                </a>
+            </div>
+            <p class="price">Price: Rs. <span style="font-weight: bold;">950</span></p>
+            <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+        </div>
+
+        <div class="product">
+            <h1>375ml Customize Glass Water Bottle</h1>
+            <p style="color: Green;">In stock</p>
+            <div class="image-wrapper">
+                <a href="375mll img.jpg" target="_blank">
+                    <img src="375mll img.jpg" alt="375ml Customize Glass Water Bottles" class="enlarge-image">
+                </a>
+            </div>
+            <p class="price">Price: Rs. <span style="font-weight: bold;">800</span></p>
+            <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+        </div>
+
+        <div class="product">
+            <h1>600ml Customize Glass Water Bottle</h1>
+            <p style="color: red;">Out Of Stock</p>
+            <div class="image-wrapper">
+                <a href="Plastic bottle 600ml.jpg" target="_blank">
+                    <img src="Plastic bottle 600ml.jpg" alt="Plastic Water Bottle" class="enlarge-image">
+                </a>
+            </div>
+            <p class="price">Price: Rs. <span style="font-weight: bold;">550</span></p>
+            <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+        </div>
+
+        <div class="product">
+            <h1>500ml Customize Glass Water Bottle</h1>
+            <p style="color: Green;">In stock</p>
+            <div class="image-wrapper">
+                <a href="Plastic bottle 500ml.jpg" target="_blank">
+                    <img src="Plastic bottle 500ml.jpg" alt="500ml Customize Glass Water Bottle" class="enlarge-image">
+                </a>
+            </div>
+            <p class="price">Price: Rs. <span style="font-weight: bold;">650</span></p>
+            <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Lora Online Shopping Store. All rights reserved.</p>
+    </div>
 
 </body>
 
