@@ -55,31 +55,31 @@
 
     /* Navbar Styles */
     .navbar {
-            background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
-            overflow: hidden;
-            text-align: center;
-        }
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      overflow: hidden;
+      padding: 10px 0;
+    }
 
-        .navbar a {
-            float: left;
-            display: inline-block;
-            color: black;
-            text-align: center;
-            padding: 5px 16px;
-            text-decoration: none;
-            font-family: 'Uni Sans Heavy Italic', sans-serif;
-        }
+    .navbar a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-family: 'Uni Sans Heavy Italic', sans-serif;
+    }
 
-        .navbar a img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
+    .navbar a img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
 
-        .navbar a:hover {
-            background-color: #ddd;
+    .navbar a:hover {
+      background-color: #ddd;
     }
 
     /* Add Background Image to Product Container */
@@ -89,14 +89,13 @@
       grid-gap: 20px;
       padding: 20px;
       background-color: #f6f7f9;
-      background-image: url('');
       background-size: cover;
       background-position: center;
     }
 
     .product {
       text-align: center;
-      background-color: #f6f7f9(247, 231, 231, 0.8); /* Adding a semi-transparent background for product items */
+      background-color: rgba(247, 231, 231, 0.8); /* Semi-transparent background for product items */
       padding: 20px;
       border-radius: 10px; /* Optional: Adds rounded corners to each product */
     }
@@ -160,9 +159,19 @@
         max-width: 100%; /* Ensure images resize to fit mobile screen */
       }
 
+      /* Navbar change for mobile */
+      .navbar {
+        display: flex;
+        justify-content: space-between; /* Keep items in a single row */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Allow horizontal scrolling if necessary */
+      }
+
       .navbar a {
-        float: none;
-        width: 100%; /* Make navbar items stack vertically on mobile */
+        flex: 1; /* Make sure the links take up equal space */
+        white-space: nowrap; /* Prevent text from wrapping */
+        padding: 10px 8px;
+        text-align: center; /* Ensure text is centered in mobile */
       }
 
       .order-button {
@@ -216,28 +225,25 @@
     </div>
   </div>
 
- <!-- Navbar -->
-<div class="navbar">
-  <a href="website2.html">
-    <img src="website home page icon.png" alt="Home Icon" style="width: 20px; height: 20px; vertical-align: middle;">
-    Home
-  </a>
-  <a href="Contact Us.html">
-    <img src="website contact page icon.png" alt="Contact Us Icon" style="width: 20px; height: 20px; vertical-align: middle;">
-    Contact Us
-  </a>
-  <a href="Gallery 2.html">
-    <img src="website gallery page icon.png" alt="Gallery Icon" style="width: 20px; height: 20px; vertical-align: middle;">
-    Gallery
-  </a>
-  <a href="About Us.html">
-    <img src="website gallery page icon png.png" alt="About Us Icon" style="width: 20px; height: 20px; vertical-align: middle;">
-    About Us
-  </a>
-</div>
-
-
-
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="website2.html">
+      <img src="website home page icon.png" alt="Home Icon">
+      Home
+    </a>
+    <a href="Contact Us.html">
+      <img src="website contact page icon.png" alt="Contact Us Icon">
+      Contact Us
+    </a>
+    <a href="Gallery 2.html">
+      <img src="website gallery page icon.png" alt="Gallery Icon">
+      Gallery
+    </a>
+    <a href="About Us.html">
+      <img src="website gallery page icon png.png" alt="About Us Icon">
+      About Us
+    </a>
+  </div>
 
   <!-- Product Container with Background -->
   <div class="container">
@@ -249,117 +255,15 @@
           <img src="750ml img.jpg" alt="750ml Customize Glass Water Bottles" class="enlarge-image">
         </a>
       </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">950</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>375ml Customize Glass Water Bottle</h1>
-      <p style="color: Green;">In stock</p>
-      <div class="image-wrapper">
-        <a href="375mll img.jpg" target="_blank">
-          <img src="375mll img.jpg" alt="375ml Customize Glass Water Bottles" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">800</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>600ml Customize Glass Water Bottle</h1>
-      <p style="color: red;">Out Of Stock</p>
-      <div class="image-wrapper">
-        <a href="Plastic bottle 600ml.jpg" target="_blank">
-          <img src="Plastic bottle 600ml.jpg" alt="Plastic Water Bottle" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">500</span></p>
-      <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
-    </div>
-
-    <div class="product">
-        <h1>Customize Mug</h1>
-        <p style="color: red;">Out Of Stock</p>
-        <div class="image-wrapper">
-            <a href="Mug.jpg" target="_blank">
-              <img src="Mug.jpg" alt="Customize Mug" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1100</span></p>
-      <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
-    </div>
-
-    <div class="product">
-        <h1>Plant Pot</h1>
-        <p style="color: red;">Out Of Stock</p>
-        <div class="image-wrapper">
-          <a href="plant pot.jpg" target="_blank">
-            <img src="plant pot.jpg" alt="Plant Pot" class="enlarge-image">
-        </a>
-      </div>
       <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1500</span></p>
-      <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>Customize T-Shirt</h1>
-      <p style="color: blue;">Coming Soon</p>
-      <div class="image-wrapper">
-        <a href="T Shirt.png" target="_blank">
-          <img src="T Shirt.png" alt="Blue Frock" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2000</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>Wall Art</h1>
-    <p style="color: blue;">Coming Soon</p>
-    <div class="image-wrapper">
-        <a href="pngwing.com.png" target="_blank">
-            <img src="pngwing.com.png" alt="Wall Art" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2200</span></p>
-    <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+      <button class="order-button">Order</button>
     </div>
   </div>
 
-<!-- Footer Section -->
-<div class="footer">
-  &copy; 2024 Lora Online Shopping Store. All rights reserved.
-  <p>
-      <img src="call-icon.png" alt="Call Icon" width="24" height="24">
-      <a href="tel:+94764178885" style="color: black;">+94764178885</a>
-  </p>
-  <p>
-      <img src="whatsapp-icon.png" alt="WhatsApp Icon" width="24" height="24">
-      <a href="https://wa.me/94705011212?text=Hello%21%20I%20have%20a%20question." style="color: black;">+94705011212</a>
-  </p>
-  <p>
-      <a href="https://www.facebook.com/loraonlineshopping.lk" style="color: black;">
-          <img src="facebook-icon.png" alt="Facebook Icon" width="24" height="24"> Visit us on Facebook
-      </a>
-  </p>
-  <p>
-      <a href="https://www.instagram.com/loraonlineshopping.lk/" style="color: black;">
-          <img src="instagram-icon.png" alt="Instagram Icon" width="24" height="24"> Visit us on Instagram
-      </a>
-  </p>
-  <p>
-      <img src="google-maps-icon.png" alt="Google Maps Icon" width="24" height="24">
-      <a href="https://www.google.com/maps/search/?api=1&query=614%2F2%2FC+Daranagama%2C+Delgoda" target="_blank" style="color: black;">
-          Address: 614/2/C Daranagama, Delgoda
-      </a>
-  </p>
-  <p>
-      <img src="gmail-icon.png" alt="Gmail Icon" width="24" height="24">
-      <a href="mailto:lorafamily.lk@gmail.com" style="color: black;">lorafamily.lk@gmail.com</a>
-  </p>
-</div>
-
-
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2023 Lora Online Shopping Store. All rights reserved.
+  </div>
 
 </body>
 
