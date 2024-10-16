@@ -59,6 +59,7 @@
     border-bottom: 1px solid #ddd;
     overflow: hidden;
     text-align: center;
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 .navbar a {
@@ -82,26 +83,26 @@
     background-color: #ddd;
 }
 
-/* Mobile Version - Fix Spacing Issue */
+/* Mobile Version - Single Row Layout */
 @media (max-width: 480px) {
+    .navbar {
+        white-space: nowrap; /* Prevent items from wrapping */
+        overflow-x: auto; /* Allow scrolling if content overflows */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+    }
+
     .navbar a {
         float: none;
-        display: block;
-        width: 100%;
-        padding: 10px 0; /* Adjust padding for more space */
+        display: inline-block; /* Keep items inline */
+        padding: 5px 10px; /* Adjust padding for more space */
         text-align: center;
     }
 
     .navbar a img {
-        margin-right: 10px; /* Increase space between icon and text for better readability */
-    }
-
-    /* Additional Mobile Adjustment */
-    .navbar {
-        display: flex;
-        flex-direction: column; /* Ensure items are aligned vertically */
+        margin-right: 5px; /* Keep spacing between icon and text consistent */
     }
 }
+
     /* Add Background Image to Product Container */
     .container {
       display: grid;
