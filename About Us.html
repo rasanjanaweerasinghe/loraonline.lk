@@ -12,6 +12,9 @@
             margin: 0;
             padding: 0;
             background-color: #f6f7f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         h1 {
@@ -120,55 +123,41 @@
         /* About Us Section Styles */
         #contacts {
             width: 80%;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 20px auto;
             text-align: center;
-            background-color: #f6f7f9;
             font-size: 16px;
             color: #000;
+        }
+
+        #contacts p {
+            margin-bottom: 20px;
         }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             #contacts {
-                width: 90%; /* Adjust width for mobile screens */
-                padding: 15px;
-                font-size: 14px; /* Reduce font size for better readability */
+                width: 90%;
+                font-size: 14px;
             }
 
             #shop-now-button {
-                left: 20px; /* Adjust button position for mobile */
+                left: 20px;
                 font-size: 16px;
             }
         }
 
         /* Footer Styles */
         .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
             background-color: #f0dfd8;
-            color: rgb(0, 0, 0);
+            color: #000;
             text-align: center;
-            padding: 3px 0;
-            font-family: Arial, sans-serif;
+            padding: 10px 0;
+            margin-top: auto; /* Ensure the footer is at the bottom */
         }
 
-        /* Ensure content is scrollable and doesn't get cut off */
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
+        /* Container for scrolling */
         .content {
-            flex: 1 0 auto;
-            padding-bottom: 50px; /* Give space for footer on mobile */
-        }
-
-        .footer {
-            flex-shrink: 0;
+            flex-grow: 1;
         }
     </style>
 </head>
@@ -209,7 +198,6 @@
 
     <!-- Content Section -->
     <div class="content">
-        <!-- About Us Section -->
         <div id="contacts">
             <p>• Lora Online Shopping Store is a leading e-commerce platform that offers a wide range of customizable products, catering to the needs of individuals seeking unique and personalized items. Our store specializes in Customize Glass Water Bottles, Customize Mugs, Clothing, and various other customizable items.</p>
             <p>• At Lora Online Shopping Store, we take pride in our high-quality products that are designed and produced locally in Sri Lanka. We prioritize craftsmanship and attention to detail to ensure that each product meets the highest standards of excellence.</p>
