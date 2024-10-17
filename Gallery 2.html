@@ -170,19 +170,15 @@
         }
 
         /* Responsive Styles */
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
             .product {
                 width: 100%;
             }
-            #shop-now-button {
-                left: 20px;
-                font-size: 16px;
-            }
 
             #shop-now-button {
-                top: 220px; /* Move below the logo for mobile */
-                left: 50%;
-                transform: translateX(-50%);
+                top: 220px; /* Adjusted to move lower in mobile view */
+                left: 20px; /* Position it to the left without crossing edges */
+                transform: none; /* Remove centering */
                 font-size: 16px;
                 padding: 8px 16px;
             }
@@ -309,36 +305,41 @@
             align-items: center;
         }
 
-        .lightbox-content {
+        .lightbox img {
             max-width: 90%;
             max-height: 90%;
         }
 
-        .close {
+        .lightbox .close {
             position: absolute;
             top: 20px;
             right: 30px;
+            color: #fff;
             font-size: 40px;
-            color: white;
+            font-weight: bold;
             cursor: pointer;
         }
     </style>
 
     <script>
+        // Function to open lightbox
         function openLightbox(image) {
-            document.getElementById("lightbox").style.display = "flex";
-            document.getElementById("lightboxImage").src = image.src;
+            var lightbox = document.getElementById("lightbox");
+            var lightboxImage = document.getElementById("lightboxImage");
+            lightboxImage.src = image.src;
+            lightbox.style.display = "flex";
         }
 
+        // Function to close lightbox
         function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
+            var lightbox = document.getElementById("lightbox");
+            lightbox.style.display = "none";
         }
     </script>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Lora Online Shopping Store. All rights reserved.</p>
-    
+        <p>&copy; 2024 Lora Online Shopping Store. All Rights Reserved.</p>
     </footer>
 </body>
 
