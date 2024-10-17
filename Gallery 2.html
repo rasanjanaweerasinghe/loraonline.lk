@@ -56,6 +56,7 @@
                 filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
                 transform: scale(1);
             }
+
             100% {
                 filter: drop-shadow(0 0 15px #61c5b7);
                 transform: scale(1.05);
@@ -96,9 +97,11 @@
             0% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
@@ -147,78 +150,22 @@
         }
 
         /* Footer Styles */
-        .footer {
+        footer {
             background-color: #f0dfd8;
             color: #000;
             text-align: center;
             padding: 10px 0;
+            width: 100%;
             position: relative;
             bottom: 0;
-            width: 100%;
         }
 
-        /* Main Container to hold all content and allow scrolling */
+        /* Flexbox Layout for Full-Page Height */
         .content {
-            flex: 1 0 auto; /* Ensure the content section takes up remaining space and allows scrolling */
+            flex: 1; /* Ensures the content section takes up remaining space and allows scrolling */
         }
-    </style>
-</head>
 
-<body>
-
-    <!-- Cover Section -->
-    <div class="cover-section">
-        <div class="logo">
-            <a href="website2.html">
-                <img src="Lora logo test png.png" alt="Lora Logo" width="200" height="200">
-            </a>
-            <h1 class="website-name">Lora Online Shopping Store</h1>
-        </div>
-    </div>
-
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="website2.html">
-            <img src="website home page icon.png" alt="Home Icon"> Home
-        </a>
-        <a href="Contact Us.html">
-            <img src="website contact page icon.png" alt="Contact Us Icon"> Contact Us
-        </a>
-        <a href="PC and mobile.html">
-            <img src="website product icon.png" alt="Products Icon"> Products
-        </a>
-        <a href="Gallery 2.html">
-            <img src="website gallery page icon.png" alt="Gallery Icon"> Gallery
-        </a>
-        <a href="About Us.html">
-            <img src="website gallery page icon png.png" alt="About Us Icon"> About Us
-        </a>
-    </div>
-
-    <!-- Blinking Button -->
-    <a href="PC and mobile.html" id="shop-now-button">Shop Now</a>
-
-    <div class="gallery">
-        <img src="gallery-image-1.jpg" alt="Gallery Image 1" onclick="openLightbox(this)">
-        <img src="gallery-image-2.jpg" alt="Gallery Image 2" onclick="openLightbox(this)">
-        <img src="gallery-image-3.jpg" alt="Gallery Image 3" onclick="openLightbox(this)">
-        <img src="gallery-image-4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
-        <img src="gallery-image-5.jpg" alt="Gallery Image 5" onclick="openLightbox(this)">
-        <img src="gallery-image-6.jpg" alt="Gallery Image 6" onclick="openLightbox(this)">
-        <img src="gallery-image-7.jpg" alt="Gallery Image 7" onclick="openLightbox(this)">
-        <img src="gallery-image-8.jpg" alt="Gallery Image 8" onclick="openLightbox(this)">
-        <img src="gallery-image-9.jpg" alt="Gallery Image 9" onclick="openLightbox(this)">
-        <img src="gallery-image-10.jpg" alt="Gallery Image 10" onclick="openLightbox(this)">
-        <img src="gallery-image-11.jpg" alt="Gallery Image 11" onclick="openLightbox(this)">
-    </div>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightboxImage">
-    </div>
-
-    <style>
+        /* Gallery */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -267,6 +214,69 @@
             cursor: pointer;
         }
     </style>
+</head>
+
+<body>
+
+    <!-- Cover Section -->
+    <div class="cover-section">
+        <div class="logo">
+            <a href="website2.html">
+                <img src="Lora logo test png.png" alt="Lora Logo" width="200" height="200">
+            </a>
+            <h1 class="website-name">Lora Online Shopping Store</h1>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="website2.html">
+            <img src="website home page icon.png" alt="Home Icon"> Home
+        </a>
+        <a href="Contact Us.html">
+            <img src="website contact page icon.png" alt="Contact Us Icon"> Contact Us
+        </a>
+        <a href="PC and mobile.html">
+            <img src="website product icon.png" alt="Products Icon"> Products
+        </a>
+        <a href="Gallery 2.html">
+            <img src="website gallery page icon.png" alt="Gallery Icon"> Gallery
+        </a>
+        <a href="About Us.html">
+            <img src="website gallery page icon png.png" alt="About Us Icon"> About Us
+        </a>
+    </div>
+
+    <!-- Blinking Button -->
+    <a href="PC and mobile.html" id="shop-now-button">Shop Now</a>
+
+    <div class="content">
+        <!-- Gallery -->
+        <div class="gallery">
+            <img src="gallery-image-1.jpg" alt="Gallery Image 1" onclick="openLightbox(this)">
+            <img src="gallery-image-2.jpg" alt="Gallery Image 2" onclick="openLightbox(this)">
+            <img src="gallery-image-3.jpg" alt="Gallery Image 3" onclick="openLightbox(this)">
+            <img src="gallery-image-4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
+            <img src="gallery-image-5.jpg" alt="Gallery Image 5" onclick="openLightbox(this)">
+            <img src="gallery-image-6.jpg" alt="Gallery Image 6" onclick="openLightbox(this)">
+            <img src="gallery-image-7.jpg" alt="Gallery Image 7" onclick="openLightbox(this)">
+            <img src="gallery-image-8.jpg" alt="Gallery Image 8" onclick="openLightbox(this)">
+            <img src="gallery-image-9.jpg" alt="Gallery Image 9" onclick="openLightbox(this)">
+            <img src="gallery-image-10.jpg" alt="Gallery Image 10" onclick="openLightbox(this)">
+            <img src="gallery-image-11.jpg" alt="Gallery Image 11" onclick="openLightbox(this)">
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightboxImage">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lora Online Shopping Store. All Rights Reserved.</p>
+    </footer>
 
     <script>
         // Function to open lightbox
@@ -284,10 +294,6 @@
         }
     </script>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Lora Online Shopping Store. All Rights Reserved.</p>
-    </footer>
 </body>
 
 </html>
