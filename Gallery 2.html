@@ -12,6 +12,9 @@
             margin: 0;
             padding: 0;
             background-color: #f6f7f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         h1 {
@@ -53,7 +56,6 @@
                 filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
                 transform: scale(1);
             }
-
             100% {
                 filter: drop-shadow(0 0 15px #61c5b7);
                 transform: scale(1.05);
@@ -89,111 +91,14 @@
             background-color: #ddd;
         }
 
-        /* Container Styles */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Product Styles */
-        .product {
-            display: inline-block;
-            width: 300px;
-            margin: 20px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .product img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .product h2 {
-            margin-top: 0;
-            font-size: 24px;
-        }
-
-        .product p {
-            margin: 0;
-            font-size: 18px;
-            color: #302b2c;
-        }
-
-        .product button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #f21c51;
-            color: #ffffff;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .product button:hover {
-            background-color: #e3164c;
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #f0dfd8;
-            border-top: 1px solid #ddd;
-            padding: 5px;
-            text-align: center;
-            color: #000000;
-        }
-
-        footer a {
-            text-decoration: none; /* Remove underline */
-            color: rgb(0, 0, 0);
-        }
-
-        /* Slideshow Styles */
-        .slideshow-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 0px;
-        }
-
-        .slideshow-image {
-            display: none;
-            width: 1900px;
-            height: auto;
-        }
-
-        .slideshow-image.active {
-            display: block;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .product {
-                width: 100%;
-            }
-
-            #shop-now-button {
-                top: 220px; /* Adjusted to move lower in mobile view */
-                left: 20px; /* Position it to the left without crossing edges */
-                transform: none; /* Remove centering */
-                font-size: 16px;
-                padding: 8px 16px;
-            }
-        }
-
         /* Blinking Button */
         @keyframes blink {
             0% {
                 opacity: 1;
             }
-
             50% {
                 opacity: 0;
             }
-
             100% {
                 opacity: 1;
             }
@@ -213,6 +118,48 @@
             border: none;
             cursor: pointer;
             animation: blink 1s infinite;
+        }
+
+        /* About Us Section Styles */
+        #contacts {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 16px;
+            color: #000;
+        }
+
+        #contacts p {
+            margin-bottom: 20px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            #contacts {
+                width: 90%;
+                font-size: 14px;
+            }
+
+            #shop-now-button {
+                left: 20px;
+                font-size: 16px;
+            }
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #f0dfd8;
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Main Container to hold all content and allow scrolling */
+        .content {
+            flex: 1 0 auto; /* Ensure the content section takes up remaining space and allows scrolling */
         }
     </style>
 </head>
