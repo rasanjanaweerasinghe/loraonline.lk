@@ -11,7 +11,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f6f7f9; /* Set background color */
+            background-color: #f6f7f9;
         }
 
         h1 {
@@ -29,12 +29,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column; /* Align items vertically */
+            flex-direction: column;
         }
 
         .logo {
             text-align: center;
-            position: relative; /* For positioning the glow */
+            position: relative;
         }
 
         .website-name {
@@ -45,7 +45,7 @@
 
         /* Continuous Glowing Effect */
         .logo img {
-            animation: glow 1.5s infinite alternate; /* Apply animation */
+            animation: glow 1.5s infinite alternate;
         }
 
         @keyframes glow {
@@ -53,6 +53,7 @@
                 filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
                 transform: scale(1);
             }
+
             100% {
                 filter: drop-shadow(0 0 15px #61c5b7);
                 transform: scale(1.05);
@@ -148,14 +149,17 @@
 
         /* Slideshow Styles */
         .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
             display: flex;
             justify-content: center;
-            margin-top: 0px;
+            align-items: center;
         }
 
         .slideshow-image {
             display: none;
-            width: 1900px;
+            width: 100%;
             height: auto;
         }
 
@@ -163,11 +167,32 @@
             display: block;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .product {
-                width: 100%;
-            }
+        /* Arrow Controls */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+            user-select: none;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         /* Blinking Button */
@@ -199,6 +224,28 @@
             border: none;
             cursor: pointer;
             animation: blink 1s infinite;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .product {
+                width: 100%;
+            }
+
+            .slideshow-container {
+                max-width: 100%;
+            }
+
+            .prev, .next {
+                font-size: 12px;
+                padding: 10px;
+            }
+
+            #shop-now-button {
+                top: 70px;
+                left: 20px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -239,74 +286,59 @@
 
     <!-- Slideshow -->
     <div class="slideshow-container">
-        <img class="slideshow-image" src="gallery-image-16.jpg" alt="Image 16">
-        <img class="slideshow-image" src="Plastic bottle 600ml New Design.jpg">
-        <img class="slideshow-image" src="gallery-image-18.jpg" alt="Image 15">
+        <img class="slideshow-image active" src="gallery-image-16.jpg" alt="Image 16">
+        <img class="slideshow-image" src="Plastic bottle 600ml New Design.jpg" alt="Plastic Bottle">
+        <img class="slideshow-image" src="gallery-image-18.jpg" alt="Image 18">
         <img class="slideshow-image" src="gallery-image-17.jpg" alt="Image 17">
-        <img class="slideshow-image" src="gallery-image-19.jpg" alt="Image 18">
-        <img class="slideshow-image" src="gallery-image-15.jpg" alt="Image 18">
+        <img class="slideshow-image" src="gallery-image-19.jpg" alt="Image 19">
+        <img class="slideshow-image" src="gallery-image-15.jpg" alt="Image 15">
+
+        <!-- Arrow buttons -->
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
     </div>
 
     <!-- Footer -->
-<footer>
-    <p>© 2024 Lora Online Shopping Store. All rights reserved.</p>
-    <p>
-        <img src="call-icon.png" alt="Call Icon" width="24" height="24">
-        <a href="tel:+94764178885" style="color: rgb(0, 0, 0);">+94764178885</a>
-    </p>
-    <p>
-        <img src="whatsapp-icon.png" alt="WhatsApp Icon" width="24" height="24">
-        <a href="https://wa.me/94705011212?text=Hello%21%20I%20have%20a%20question." style="color: rgb(0, 0, 0);">+94705011212</a>
-    </p>
-    <p>
-        <a href="https://www.facebook.com/loraonlineshopping.lk" style="color: rgb(0, 0, 0);">
-            <img src="facebook-icon.png" alt="Facebook Icon" width="24" height="24"> Visit us on Facebook
-        </a>
-    </p>
-    <p>
-        <a href="https://www.instagram.com/loraonlineshopping.lk/" style="color: rgb(0, 0, 0);">
-            <img src="instagram-icon.png" alt="Instagram Icon" width="24" height="24"> Visit us on Instagram
-        </a>
-    </p>
-    <p>
-        <img src="google-maps-icon.png" alt="Google Maps Icon" width="24" height="24">
-        <a href="https://www.google.com/maps/search/?api=1&query=614%2F2%2FC+Daranagama%2C+Delgoda" target="_blank" style="color: rgb(0, 0, 0);">
-            Address: 614/2/C Daranagama, Delgoda
-        </a>
-    </p>
-    <p>
-        <img src="gmail-icon.png" alt="Gmail Icon" width="24" height="24">
-        <a href="mailto:lorafamily.lk@gmail.com" style="color: rgb(0, 0, 0);">lorafamily.lk@gmail.com</a>
-    </p>
-</footer>
+    <footer>
+        <p>© 2024 Lora Online Shopping Store. All rights reserved.</p>
+        <p>
+            <img src="call-icon.png" alt="Call Icon" width="24" height="24">
+            <a href="tel:+94764178885" style="color: rgb(0, 0, 0);">+94764178885</a>
+        </p>
+        <p>
+            <img src="whatsapp-icon.png" alt="WhatsApp Icon" width="24" height="24">
+            <a href="https://wa.me/94705011212?text=Hello%21%20I%20have%20a%20question." style="color: rgb(0, 0, 0);">+94705011212</a>
+        </p>
+        <p>
+            <a href="https://www.facebook.com/LORAShop/" style="color: rgb(0, 0, 0);">Visit us on Facebook</a>
+        </p>
+    </footer>
 
-
-    <!-- Slideshow Script -->
     <script>
-        window.addEventListener('load', function () {
-            const slideshowImages = document.querySelectorAll('.slideshow-image');
-            let currentSlide = 0;
+        let currentSlide = 0;
+        const slides = document.getElementsByClassName("slideshow-image");
 
-            function showSlide(index) {
-                if (index < 0) {
-                    index = slideshowImages.length - 1;
-                } else if (index >= slideshowImages.length) {
-                    index = 0;
-                }
-
-                slideshowImages[currentSlide].classList.remove('active');
-                slideshowImages[index].classList.add('active');
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
                 currentSlide = index;
             }
 
-            function nextSlide() {
-                showSlide(currentSlide + 1);
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
             }
 
-            setInterval(nextSlide, 5000); // Automatically move to the next slide every 5 seconds
-            showSlide(currentSlide); // Show the initial slide
-        });
+            slides[currentSlide].classList.add("active");
+        }
+
+        function moveSlide(step) {
+            showSlide(currentSlide + step);
+        }
     </script>
+
 </body>
 
 </html>
