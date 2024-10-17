@@ -12,6 +12,9 @@
             margin: 0;
             padding: 0;
             background-color: #f6f7f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         h1 {
@@ -89,125 +92,6 @@
             background-color: #ddd;
         }
 
-        /* Container Styles */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Product Styles */
-        .product {
-            display: inline-block;
-            width: 300px;
-            margin: 20px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .product img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .product h2 {
-            margin-top: 0;
-            font-size: 24px;
-        }
-
-        .product p {
-            margin: 0;
-            font-size: 18px;
-            color: #302b2c;
-        }
-
-        .product button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #f21c51;
-            color: #ffffff;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .product button:hover {
-            background-color: #e3164c;
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #f0dfd8;
-            border-top: 1px solid #ddd;
-            padding: 10px 20px;
-            text-align: center;
-            color: #000000;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Slideshow Styles */
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .slideshow-image {
-            display: none;
-            width: 100%;
-            height: auto;
-        }
-
-        .slideshow-image.active {
-            display: block;
-        }
-
-        /* Arrow Controls */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 3px;
-            user-select: none;
-            z-index: 1;
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
         /* Blinking Button */
         @keyframes blink {
             0% {
@@ -239,35 +123,95 @@
             animation: blink 1s infinite;
         }
 
-        /* Responsive Styles */
+        /* About Us Section Styles */
+        #contacts {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 16px;
+            color: #000;
+        }
+
+        #contacts p {
+            margin-bottom: 20px;
+        }
+
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .product {
-                width: 100%;
-            }
-
-            .slideshow-container {
-                max-width: 100%;
-            }
-
-            .prev, .next {
-                font-size: 12px;
-                padding: 10px;
+            #contacts {
+                width: 90%;
+                font-size: 14px;
             }
 
             #shop-now-button {
-                top: 70px;
                 left: 20px;
                 font-size: 16px;
             }
+        }
 
-            footer {
-                padding: 20px 10px;
-                text-align: center;
-            }
+        /* Footer Styles */
+        footer {
+            background-color: #f0dfd8;
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
 
-            footer p {
-                font-size: 14px;
-            }
+        /* Flexbox Layout for Full-Page Height */
+        .content {
+            flex: 1; /* Ensures the content section takes up remaining space and allows scrolling */
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -306,74 +250,50 @@
     <!-- Blinking Button -->
     <a href="PC and mobile.html" id="shop-now-button">Shop Now</a>
 
-    <!-- Slideshow -->
-    <div class="slideshow-container">
-        <img class="slideshow-image active" src="gallery-image-16.jpg" alt="Image 16">
-        <img class="slideshow-image" src="Plastic bottle 600ml New Design.jpg" alt="Plastic Bottle">
-        <img class="slideshow-image" src="gallery-image-18.jpg" alt="Image 18">
-        <img class="slideshow-image" src="gallery-image-17.jpg" alt="Image 17">
-        <img class="slideshow-image" src="gallery-image-19.jpg" alt="Image 19">
-        <img class="slideshow-image" src="gallery-image-15.jpg" alt="Image 15">
+    <div class="content">
+        <!-- Gallery -->
+        <div class="gallery">
+            <img src="gallery-image-1.jpg" alt="Gallery Image 1" onclick="openLightbox(this)">
+            <img src="gallery-image-2.jpg" alt="Gallery Image 2" onclick="openLightbox(this)">
+            <img src="gallery-image-3.jpg" alt="Gallery Image 3" onclick="openLightbox(this)">
+            <img src="gallery-image-4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
+            <img src="gallery-image-5.jpg" alt="Gallery Image 5" onclick="openLightbox(this)">
+            <img src="gallery-image-6.jpg" alt="Gallery Image 6" onclick="openLightbox(this)">
+            <img src="gallery-image-7.jpg" alt="Gallery Image 7" onclick="openLightbox(this)">
+            <img src="gallery-image-8.jpg" alt="Gallery Image 8" onclick="openLightbox(this)">
+            <img src="gallery-image-9.jpg" alt="Gallery Image 9" onclick="openLightbox(this)">
+            <img src="gallery-image-10.jpg" alt="Gallery Image 10" onclick="openLightbox(this)">
+            <img src="gallery-image-11.jpg" alt="Gallery Image 11" onclick="openLightbox(this)">
+        </div>
 
-        <!-- Arrow buttons -->
-        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightboxImage">
+        </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 Lora Online Shopping Store. All rights reserved.</p>
-        <p>
-            <img src="call-icon.png" alt="Call Icon" width="24" height="24">
-            <a href="tel:+94764178885" style="color: black;">+94764178885</a>
-        </p>
-        <p>
-            <img src="whatsapp-icon.png" alt="WhatsApp Icon" width="24" height="24">
-            <a href="https://wa.me/94705011212?text=Hello%21%20I%20have%20a%20question." style="color: black;">+94705011212</a>
-        </p>
-        <p>
-            <a href="https://www.facebook.com/loraonlineshopping.lk" style="color: black;">
-                <img src="facebook-icon.png" alt="Facebook Icon" width="24" height="24"> Visit us on Facebook
-            </a>
-        </p>
-        <p>
-            <a href="https://www.instagram.com/loraonlineshopping.lk/" style="color: black;">
-                <img src="instagram-icon.png" alt="Instagram Icon" width="24" height="24"> Visit us on Instagram
-            </a>
-        </p>
-        <p>
-            <img src="google-maps-icon.png" alt="Google Maps Icon" width="24" height="24">
-            <a href="https://www.google.com/maps/search/?api=1&query=614%2F2%2FC+Daranagama%2C+Delgoda" target="_blank" style="color: black;">
-                Address: 614/2/C Daranagama, Delgoda
-            </a>
-        </p>
-        <p>
-            <img src="gmail-icon.png" alt="Gmail Icon" width="24" height="24">
-            <a href="mailto:lorafamily.lk@gmail.com" style="color: black;">lorafamily.lk@gmail.com</a>
-        </p>
+        <p>&copy; 2024 Lora Online Shopping Store. All Rights Reserved.</p>
     </footer>
 
     <script>
-        let currentSlide = 0;
-        const slides = document.getElementsByClassName("slideshow-image");
-
-        function showSlide(n) {
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
-            }
-            slides[n].classList.add("active");
+        // Function to open lightbox
+        function openLightbox(image) {
+            var lightbox = document.getElementById("lightbox");
+            var lightboxImage = document.getElementById("lightboxImage");
+            lightboxImage.src = image.src;
+            lightbox.style.display = "flex";
         }
 
-        function moveSlide(step) {
-            currentSlide += step;
-            if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            } else if (currentSlide < 0) {
-                currentSlide = slides.length - 1;
-            }
-            showSlide(currentSlide);
+        // Function to close lightbox
+        function closeLightbox() {
+            var lightbox = document.getElementById("lightbox");
+            lightbox.style.display = "none";
         }
     </script>
+
 </body>
 
 </html>
