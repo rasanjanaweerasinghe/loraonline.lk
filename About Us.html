@@ -70,35 +70,36 @@
             }
         }
 
-        /* Navbar Styles */
-        .navbar {
+         /* Navbar Styles */
+         .navbar {
+            display: flex;
+            flex-wrap: wrap;
             background-color: #ffffff;
             border-bottom: 1px solid #ddd;
-            overflow: hidden;
-            text-align: center;
+            justify-content: center;
+            padding: 10px;
         }
 
         .navbar a {
-            float: left;
-            display: inline-block;
+            display: flex;
+            align-items: center;
             color: black;
-            text-align: center;
-            padding: 5px 16px;
+            padding: 10px 16px;
             text-decoration: none;
-            font-family: 'Sora', sans-serif; /* Applied Sora font */
+            font-family: 'Sora', sans-serif;
+            font-size: 16px;
+            white-space: nowrap;
         }
 
         .navbar a img {
             width: 20px;
             height: 20px;
-            vertical-align: middle;
-            margin-right: 5px;
+            margin-right: 8px;
         }
 
         .navbar a:hover {
             background-color: #ddd;
         }
-
         /* Blinking Button */
         @keyframes blink {
             0% {
@@ -151,6 +152,16 @@
             #shop-now-button {
                 left: 20px;
                 font-size: 16px;
+            }
+
+            .navbar a {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .navbar a img {
+                width: 16px;
+                height: 16px;
             }
         }
 
