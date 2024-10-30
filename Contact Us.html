@@ -73,27 +73,29 @@
 
         /* Navbar Styles */
         .navbar {
+            display: flex;
+            flex-wrap: wrap;
             background-color: #ffffff;
             border-bottom: 1px solid #ddd;
-            overflow: hidden;
-            text-align: center;
+            justify-content: center;
+            padding: 10px;
         }
 
         .navbar a {
-            float: left;
-            display: inline-block;
+            display: flex;
+            align-items: center;
             color: black;
-            text-align: center;
-            padding: 5px 16px;
+            padding: 10px 16px;
             text-decoration: none;
-            font-family: 'Sora', sans-serif; /* Applied Sora font */
+            font-family: 'Sora', sans-serif;
+            font-size: 16px;
+            white-space: nowrap;
         }
 
         .navbar a img {
             width: 20px;
             height: 20px;
-            vertical-align: middle;
-            margin-right: 5px;
+            margin-right: 8px;
         }
 
         .navbar a:hover {
@@ -146,10 +148,9 @@
         #contacts p {
             margin-bottom: 20px;
             transition: box-shadow 0.3s ease;
-            padding: 5px; /* Padding for better effect */
+            padding: 5px;
         }
 
-        /* Embossed effect on hover for each contact line */
         #contacts p:hover {
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15) inset;
         }
@@ -184,7 +185,12 @@
                 font-size: 16px;
             }
 
-            .contact-icon {
+            .navbar a {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .navbar a img {
                 width: 16px;
                 height: 16px;
             }
