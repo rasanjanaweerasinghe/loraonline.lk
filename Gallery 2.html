@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,28 +63,37 @@
                 filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
                 transform: scale(1);
             }
-
             100% {
                 filter: drop-shadow(0 0 15px #61c5b7);
                 transform: scale(1.05);
             }
         }
 
-        /* Navbar Styles from the 1st Website */
+        /* Navbar Styles */
         .navbar {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            flex-wrap: wrap;
             background-color: #ffffff;
             border-bottom: 1px solid #ddd;
+            justify-content: center;
+            padding: 10px;
         }
 
         .navbar a {
-            padding: 10px 20px;
+            display: flex;
+            align-items: center;
             color: black;
+            padding: 10px 16px;
             text-decoration: none;
-            font-family: 'Sora', sans-serif; /* Applied Sora font */
-            font-size: 18px;
+            font-family: 'Sora', sans-serif;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .navbar a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
         }
 
         .navbar a:hover {
@@ -97,11 +105,9 @@
             0% {
                 opacity: 1;
             }
-
             50% {
                 opacity: 0;
             }
-
             100% {
                 opacity: 1;
             }
@@ -123,30 +129,11 @@
             animation: blink 1s infinite;
         }
 
-        /* About Us Section Styles */
-        #contacts {
-            width: 80%;
-            margin: 20px auto;
+        /* Content Section Styles */
+        .content {
+            flex: 1;
+            padding: 20px;
             text-align: center;
-            font-size: 16px;
-            color: #000;
-        }
-
-        #contacts p {
-            margin-bottom: 20px;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            #contacts {
-                width: 90%;
-                font-size: 14px;
-            }
-
-            #shop-now-button {
-                left: 20px;
-                font-size: 16px;
-            }
         }
 
         /* Footer Styles */
@@ -158,60 +145,6 @@
             width: 100%;
             position: relative;
             bottom: 0;
-        }
-
-        /* Flexbox Layout for Full-Page Height */
-        .content {
-            flex: 1; /* Ensures the content section takes up remaining space and allows scrolling */
-        }
-
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-            padding: 10px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Lightbox styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        .lightbox .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -228,76 +161,36 @@
         </div>
     </div>
 
-    <!-- Navbar from the 1st Website -->
+    <!-- Navbar -->
     <div class="navbar">
-        <a href="website2.html">Home</a>
-        <a href="Contact Us.html">Contact Us</a>
-        <a href="PC and mobile.html">Products</a>
-        <a href="Gallery 2.html">Gallery</a>
-        <a href="About Us.html">About Us</a>
+        <a href="website2.html">
+            <img src="website home page icon.png" alt="Home Icon"> Home
+        </a>
+        <a href="Contact Us.html">
+            <img src="website contact page icon.png" alt="Contact Us Icon"> Contact Us
+        </a>
+        <a href="PC and mobile.html">
+            <img src="website product icon.png" alt="Products Icon"> Products
+        </a>
+        <a href="Gallery 2.html">
+            <img src="website gallery page icon.png" alt="Gallery Icon"> Gallery
+        </a>
+        <a href="About Us.html">
+            <img src="website gallery page icon png.png" alt="About Us Icon"> About Us
+        </a>
     </div>
 
     <!-- Blinking Button -->
     <a href="PC and mobile.html" id="shop-now-button">Shop Now</a>
 
     <div class="content">
-        <!-- Gallery -->
-        <div class="gallery">
-            <img src="gallery-image-1.jpg" alt="Gallery Image 1" onclick="openLightbox(this)">
-            <img src="gallery-image-2.jpg" alt="Gallery Image 2" onclick="openLightbox(this)">
-            <img src="gallery-image-3.jpg" alt="Gallery Image 3" onclick="openLightbox(this)">
-            <img src="gallery-image-4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
-            <img src="gallery-image-5.jpg" alt="Gallery Image 5" onclick="openLightbox(this)">
-            <img src="gallery-image-6.jpg" alt="Gallery Image 6" onclick="openLightbox(this)">
-            <img src="gallery-image-7.jpg" alt="Gallery Image 7" onclick="openLightbox(this)">
-            <img src="gallery-image-8.jpg" alt="Gallery Image 8" onclick="openLightbox(this)">
-            <img src="gallery-image-9.jpg" alt="Gallery Image 9" onclick="openLightbox(this)">
-            <img src="gallery-image-10.jpg" alt="Gallery Image 10" onclick="openLightbox(this)">
-            <img src="gallery-image-11.jpg" alt="Gallery Image 11" onclick="openLightbox(this)">
-            <img src="gallery-image-12.jpg" alt="Gallery Image 12" onclick="openLightbox(this)">
-            <img src="gallery-image-13.jpg" alt="Gallery Image 13" onclick="openLightbox(this)">
-            <img src="gallery-image-14.jpg" alt="Gallery Image 14" onclick="openLightbox(this)">
-            <img src="gallery-image-20.jpg" alt="Gallery Image 20" onclick="openLightbox(this)">
-            <img src="gallery-image-21.jpg" alt="Gallery Image 21" onclick="openLightbox(this)">
-            <img src="gallery-image-22.jpg" alt="Gallery Image 22" onclick="openLightbox(this)">
-            <img src="gallery-image-23.jpg" alt="Gallery Image 23" onclick="openLightbox(this)">
-            <img src="gallery-image-24.jpg" alt="Gallery Image 24" onclick="openLightbox(this)">
-            <img src="gallery-image-25.jpg" alt="Gallery Image 25" onclick="openLightbox(this)">
-            <img src="gallery-image-26.jpg" alt="Gallery Image 26" onclick="openLightbox(this)">
-            <img src="gallery-image-27.jpg" alt="Gallery Image 27" onclick="openLightbox(this)">
-        </div>
+        <!-- Add your gallery or other content here -->
+    </div>
 
-        <!-- Lightbox Modal -->
-        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-            <span class="close">&times;</span
-                <img id="lightbox-image" src="" alt="Expanded Image">
-            </div>
-        </div>
-    
-        <!-- About Us Section -->
-        <div id="contacts">
-            <h2>About Us</h2>
-            <p>Welcome to Lora Online Shopping Store. We offer a wide range of quality products at affordable prices.</p>
-            <p>Contact us for more information, and make sure to explore our diverse product collections!</p>
-        </div>
-    
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 Lora Online Shopping Store. All rights reserved.</p>
-        </footer>
-    
-        <script>
-            // Lightbox functionality
-            function openLightbox(imageElement) {
-                document.getElementById("lightbox").style.display = "flex";
-                document.getElementById("lightbox-image").src = imageElement.src;
-            }
-    
-            function closeLightbox() {
-                document.getElementById("lightbox").style.display = "none";
-            }
-        </script>
-    
-    </body>
-    </html>
-    
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Lora Online Shopping Store. All rights reserved.
+    </footer>
+
+</body>
+</html>
