@@ -41,11 +41,11 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            position: relative;
         }
 
         .logo {
             text-align: center;
-            position: relative;
         }
 
         .website-name {
@@ -118,8 +118,8 @@
         }
 
         #shop-now-button {
-            position: absolute;
-            top: 100px;
+            position: fixed;
+            top: 80px;
             left: 130px;
             z-index: 9999;
             padding: 10px 20px;
@@ -133,7 +133,7 @@
             animation: blink 1s infinite;
         }
 
-        /* About Us Section Styles */
+        /* Contact Section Styles */
         #contacts {
             width: 80%;
             margin: 20px auto;
@@ -181,8 +181,10 @@
             }
 
             #shop-now-button {
+                top: 70px;
                 left: 20px;
                 font-size: 16px;
+                padding: 8px 16px;
             }
 
             .navbar a {
@@ -206,14 +208,8 @@
             color: #000;
             text-align: center;
             padding: 10px 0;
-            position: absolute;
-            bottom: 0;
             width: 100%;
-        }
-
-        /* Main Container to hold all content and allow scrolling */
-        .content {
-            flex: 1 0 auto;
+            margin-top: auto;
         }
     </style>
 </head>
