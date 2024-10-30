@@ -157,6 +157,16 @@
                 left: 20px;
                 font-size: 16px;
             }
+
+            .navbar a {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .navbar a img {
+                width: 16px;
+                height: 16px;
+            }
         }
 
         /* Footer Styles */
@@ -281,37 +291,35 @@
             <img src="gallery-image-21.jpg" alt="Gallery Image 21" onclick="openLightbox(this)">
             <img src="gallery-image-22.jpg" alt="Gallery Image 22" onclick="openLightbox(this)">
             <img src="gallery-image-23.jpg" alt="Gallery Image 23" onclick="openLightbox(this)">
-            <img src="gallery-image-24.jpg" alt="Gallery Image 24" onclick="openLightbox(this)">
-            <img src="gallery-image-25.jpg" alt="Gallery Image 25" onclick="openLightbox(this)">
-            <img src="gallery-image-26.jpg" alt="Gallery Image 26" onclick="openLightbox(this)">
-            <img src="gallery-image-27.jpg" alt="Gallery Image 27" onclick="openLightbox(this)">
         </div>
 
-        <!-- Lightbox Modal -->
-        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-            <span class="close">&times;</span>
-            <img class="lightbox-content" id="lightboxImage">
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="">
         </div>
     </div>
 
-    <!-- Footer -->
+    <div id="contacts">
+        <h2>About Us</h2>
+        <p>
+            Welcome to Lora Online Shopping Store! We offer a wide variety of products tailored to your needs.
+            Explore our collection and discover amazing deals!
+        </p>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Lora Online Shopping Store. All Rights Reserved.</p>
+        &copy; 2024 Lora Online Shopping Store. All Rights Reserved.
     </footer>
 
     <script>
-        // Function to open lightbox
-        function openLightbox(image) {
-            var lightbox = document.getElementById("lightbox");
-            var lightboxImage = document.getElementById("lightboxImage");
-            lightboxImage.src = image.src;
-            lightbox.style.display = "flex";
+        function openLightbox(element) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = element.src;
         }
 
-        // Function to close lightbox
         function closeLightbox() {
-            var lightbox = document.getElementById("lightbox");
-            lightbox.style.display = "none";
+            document.getElementById("lightbox").style.display = "none";
         }
     </script>
 
