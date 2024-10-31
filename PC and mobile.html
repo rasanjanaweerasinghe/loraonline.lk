@@ -322,54 +322,61 @@
     </p>
     <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
   </div>
-</div>
-    
-    <div class="product">
-        <h1>Plant Pot</h1>
-        <p style="color: red;">Out Of Stock</p>
-        <div class="image-wrapper">
-          <a href="plant pot.jpg" target="_blank">
-            <img src="plant pot.jpg" alt="Plant Pot" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1500</span></p>
-      <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
-    </div>
 
-    <div class="product">
-      <h1>Customize T-Shirt</h1>
-      <p style="color: blue;">Coming Soon</p>
-      <div class="image-wrapper">
-        <a href="T Shirt.png" target="_blank">
-          <img src="T Shirt.png" alt="Blue Frock" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2000</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
-    </div>
-
-    <div class="product">
-      <h1>Wall Art</h1>
-    <p style="color: blue;">Coming Soon</p>
+  <div class="product">
+    <h1>Plant Pot</h1>
+    <p style="color: red;">Out Of Stock</p>
     <div class="image-wrapper">
-        <a href="pngwing.com.png" target="_blank">
-            <img src="pngwing.com.png" alt="Wall Art" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2200</span></p>
-    <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+      <a href="plant pot.jpg" target="_blank">
+        <img src="plant pot.jpg" alt="Plant Pot" class="enlarge-image">
+      </a>
     </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1500</span></p>
+    <button class="description-button" onclick="toggleDescription('desc5')">Description</button>
+    <p id="desc5" class="description" style="display: none;">
+      A stylish, eco-friendly plant pot to add a touch of green to your space. Durable and perfect for indoor plants.
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
   </div>
 
-  <!-- JavaScript for Description Toggle -->
+  <div class="product">
+    <h1>Customize T-Shirt</h1>
+    <p style="color: blue;">Coming Soon</p>
+    <div class="image-wrapper">
+      <a href="T Shirt.png" target="_blank">
+        <img src="T Shirt.png" alt="Customize T-Shirt" class="enlarge-image">
+      </a>
+    </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2000</span></p>
+    <button class="description-button" onclick="toggleDescription('desc6')">Description</button>
+    <p id="desc6" class="description" style="display: none;">
+      Design your own custom T-shirt! Comfortable, stylish, and available soon in various colors and sizes.
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  </div>
+
+  <div class="product">
+    <h1>Wall Art</h1>
+    <p style="color: blue;">Coming Soon</p>
+    <div class="image-wrapper">
+      <a href="pngwing.com.png" target="_blank">
+        <img src="pngwing.com.png" alt="Wall Art" class="enlarge-image">
+      </a>
+    </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2200</span></p>
+    <button class="description-button" onclick="toggleDescription('desc7')">Description</button>
+    <p id="desc7" class="description" style="display: none;">
+      Unique wall art to elevate your space. Available soon in various designs and sizes for every decor style.
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  </div>
+</div>
+
+<!-- JavaScript for Description Toggle -->
 <script>
   function toggleDescription(id) {
     var description = document.getElementById(id);
-    if (description.style.display === "none") {
-      description.style.display = "block";
-    } else {
-      description.style.display = "none";
-    }
+    description.style.display = description.style.display === "none" ? "block" : "none";
   }
 </script>
 
@@ -387,6 +394,7 @@
     margin-top: 10px;
   }
 </style>
+
 
 <!-- Footer Section -->
 <div class="footer">
