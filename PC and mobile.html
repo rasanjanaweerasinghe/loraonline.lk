@@ -258,55 +258,72 @@
 
 
   <!-- Product Container with Background -->
-  <div class="container">
-    <div class="product">
-      <h1>750ml Customize Glass Water Bottle</h1>
-      <p style="color: Green;">In stock</p>
-      <div class="image-wrapper">
-        <a href="750ml img.jpg" target="_blank">
-          <img src="750ml img.jpg" alt="750ml Customize Glass Water Bottles" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">950</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+<div class="container">
+  <div class="product">
+    <h1>750ml Customize Glass Water Bottle</h1>
+    <p style="color: Green;">In stock</p>
+    <div class="image-wrapper">
+      <a href="750ml img.jpg" target="_blank">
+        <img src="750ml img.jpg" alt="750ml Customize Glass Water Bottles" class="enlarge-image">
+      </a>
     </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">950</span></p>
+    <button class="description-button" onclick="toggleDescription('desc1')">Description</button>
+    <p id="desc1" class="description" style="display: none;">
+      This 750ml glass water bottle is customizable to suit your style. It is durable, eco-friendly, and perfect for daily use.
+    </p>
+    <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+  </div>
 
-    <div class="product">
-      <h1>375ml Customize Glass Water Bottle</h1>
-      <p style="color: Green;">In stock</p>
-      <div class="image-wrapper">
-        <a href="375mll img.jpg" target="_blank">
-          <img src="375mll img.jpg" alt="375ml Customize Glass Water Bottles" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">800</span></p>
-      <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+  <div class="product">
+    <h1>375ml Customize Glass Water Bottle</h1>
+    <p style="color: Green;">In stock</p>
+    <div class="image-wrapper">
+      <a href="375mll img.jpg" target="_blank">
+        <img src="375mll img.jpg" alt="375ml Customize Glass Water Bottles" class="enlarge-image">
+      </a>
     </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">800</span></p>
+    <button class="description-button" onclick="toggleDescription('desc2')">Description</button>
+    <p id="desc2" class="description" style="display: none;">
+      This 375ml bottle is perfect for on-the-go hydration. Customizable and compact, it’s ideal for those who prefer a smaller, portable bottle.
+    </p>
+    <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+  </div>
 
-    <div class="product">
-      <h1>600ml Customize Glass Water Bottle</h1>
-      <p style="color: red;">Out Of Stock</p>
-      <div class="image-wrapper">
-        <a href="Plastic bottle 600ml.jpg" target="_blank">
-          <img src="Plastic bottle 600ml.jpg" alt="Plastic Water Bottle" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">500</span></p>
-      <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  <div class="product">
+    <h1>600ml Customize Glass Water Bottle</h1>
+    <p style="color: red;">Out Of Stock</p>
+    <div class="image-wrapper">
+      <a href="Plastic bottle 600ml.jpg" target="_blank">
+        <img src="Plastic bottle 600ml.jpg" alt="Plastic Water Bottle" class="enlarge-image">
+      </a>
     </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">500</span></p>
+    <button class="description-button" onclick="toggleDescription('desc3')">Description</button>
+    <p id="desc3" class="description" style="display: none;">
+      The 600ml bottle is a versatile and stylish choice, suitable for various beverages and easy to carry around.
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  </div>
 
-    <div class="product">
-        <h1>Customize Mug</h1>
-        <p style="color: red;">Out Of Stock</p>
-        <div class="image-wrapper">
-            <a href="Mug.jpg" target="_blank">
-              <img src="Mug.jpg" alt="Customize Mug" class="enlarge-image">
-        </a>
-      </div>
-      <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1100</span></p>
-      <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  <div class="product">
+    <h1>Customize Mug</h1>
+    <p style="color: red;">Out Of Stock</p>
+    <div class="image-wrapper">
+      <a href="Mug.jpg" target="_blank">
+        <img src="Mug.jpg" alt="Customize Mug" class="enlarge-image">
+      </a>
     </div>
-
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1100</span></p>
+    <button class="description-button" onclick="toggleDescription('desc4')">Description</button>
+    <p id="desc4" class="description" style="display: none;">
+      This customizable mug is perfect for enjoying your favorite hot drinks. Personalize it to match your unique taste!
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  </div>
+</div>
+    
     <div class="product">
         <h1>Plant Pot</h1>
         <p style="color: red;">Out Of Stock</p>
@@ -343,6 +360,33 @@
     <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
     </div>
   </div>
+
+  <!-- JavaScript for Description Toggle -->
+<script>
+  function toggleDescription(id) {
+    var description = document.getElementById(id);
+    if (description.style.display === "none") {
+      description.style.display = "block";
+    } else {
+      description.style.display = "none";
+    }
+  }
+</script>
+
+<style>
+  .description-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .description {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+</style>
 
 <!-- Footer Section -->
 <div class="footer">
