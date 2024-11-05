@@ -175,7 +175,29 @@
             bottom: 0;
             width: 100%;
         }
+/* Snowflake Styles */
+.snowflake {
+            color: #ffffff;
+            font-size: 24px;
+            position: fixed;
+            top: -10px;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
 
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0.5;
+            }
+        }
         /* Main Container to hold all content and allow scrolling */
         .content {
             flex: 1 0 auto; /* Ensure the content section takes up remaining space and allows scrolling */
@@ -230,7 +252,23 @@
             </button>
         </div>
     </div>
+ <!-- Snowfall Effect -->
+ <script>
+    const createSnowflake = () => {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.textContent = "❄";
+        snowflake.style.left = Math.random() * 100 + "vw";
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+        document.body.appendChild(snowflake);
 
+        setTimeout(() => {
+            snowflake.remove();
+        }, 5000);
+    };
+
+    setInterval(createSnowflake, 200);
+</script>
     <!-- Footer -->
     <div class="footer">
         <p>© 2024 Lora Online Shopping Store. All rights reserved.</p>
