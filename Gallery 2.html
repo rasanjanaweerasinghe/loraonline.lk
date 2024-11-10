@@ -2,366 +2,438 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lora Online Shopping Store</title>
-    <style>
-        /* Font Import */
-        @font-face {
-            font-family: 'Sora';
-            src: url('Sora-VariableFont_wght.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lora Online Shopping Store</title>
+  <style>
+    /* Font Import */
+    @font-face {
+      font-family: 'Sora';
+      src: url('Sora-VariableFont_wght.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
 
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f6f7f9;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f7f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        h1 {
-            color: #db1d49;
-        }
+    .cover-section {
+      background-image: url("Flower cover.png");
+      background-color: #f0dfd8;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
 
-        /* Cover Section with Glowing Effect */
-        .cover-section {
-            background-image: url("Flower cover.png");
-            background-color: #f0dfd8;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+    .logo {
+      text-align: center;
+      position: relative;
+    }
 
-        .logo {
-            text-align: center;
-            position: relative;
-        }
+    .website-name {
+      color: #db1d49;
+      font-size: 24px;
+      margin-top: 10px;
+    }
 
-        .website-name {
-            color: #db1d49;
-            font-size: 24px;
-            margin-top: 10px;
-        }
+    /* Continuous Glowing Effect */
+    .logo img {
+      animation: glow 1.5s infinite alternate;
+    }
 
-        /* Continuous Glowing Effect */
-        .logo img {
-            animation: glow 1.5s infinite alternate;
-        }
+    @keyframes glow {
+      0% {
+        filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
+        transform: scale(1);
+      }
+      100% {
+        filter: drop-shadow(0 0 15px rgba(219, 29, 73, 1));
+        transform: scale(1.05);
+      }
+    }
 
-        @keyframes glow {
-            0% {
-                filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
-                transform: scale(1);
-            }
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      justify-content: center;
+      padding: 10px;
+    }
 
-            100% {
-                filter: drop-shadow(0 0 15px #61c5b7);
-                transform: scale(1.05);
-            }
-        }
+    .navbar a {
+      display: flex;
+      align-items: center;
+      color: black;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-family: 'Sora', sans-serif;
+      font-size: 16px;
+      white-space: nowrap;
+    }
 
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            flex-wrap: wrap;
-            background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
-            justify-content: center;
-            padding: 10px;
-        }
+    .navbar a img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
 
-        .navbar a {
-            display: flex;
-            align-items: center;
-            color: black;
-            padding: 10px 16px;
-            text-decoration: none;
-            font-family: 'Sora', sans-serif;
-            font-size: 16px;
-            white-space: nowrap;
-        }
+    .navbar a:hover {
+      background-color: #ddd;
+    }
 
-        .navbar a img {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
+    /* Add Background Image to Product Container */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      padding: 20px;
+      background-color: #f6f7f9;
+      background-size: cover;
+      background-position: center;
+    }
 
-        .navbar a:hover {
-            background-color: #ddd;
-        }
+    .product {
+      text-align: center;
+      background-color: #f6f7f9;
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-        /* Blinking Button */
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
+    img {
+      max-width: 300px;
+      height: auto;
+    }
 
-            50% {
-                opacity: 0;
-            }
+    h1 {
+      color: black;
+      font-size: 19px;
+    }
 
-            100% {
-                opacity: 1;
-            }
-        }
+    .order-button {
+      background-color: #da1d48;
+      color: white;
+      width: 80px;
+      height: 30px;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      line-height: 30px;
+      display: inline-block;
+    }
 
-        #shop-now-button {
-            position: absolute;
-            top: 100px;
-            left: 130px;
-            z-index: 9999;
-            padding: 10px 20px;
-            background-color: #da1d48;
-            color: #fff;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            animation: blink 1s infinite;
-        }
+    .footer {
+      background-color: #f0dfd8;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 15px;
+      font-size: 15px;
+    }
 
-        /* About Us Section Styles */
-        #contacts {
-            width: 80%;
-            margin: 20px auto;
-            text-align: center;
-            font-size: 16px;
-            color: #000;
-        }
+    /* Media Queries for Tablets */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-        #contacts p {
-            margin-bottom: 20px;
-        }
+      .website-name {
+        font-size: 20px;
+      }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            #contacts {
-                width: 90%;
-                font-size: 14px;
-            }
+      .navbar a {
+        padding: 12px 14px;
+      }
+    }
 
-            #shop-now-button {
-                left: 20px;
-                font-size: 16px;
-            }
+    /* Media Queries for Mobile Devices */
+    @media (max-width: 480px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
 
-            .navbar a {
-                padding: 8px;
-                font-size: 14px;
-            }
+      .website-name {
+        font-size: 18px;
+      }
 
-            .navbar a img {
-                width: 16px;
-                height: 16px;
-            }
-        }
+      img {
+        max-width: 100%;
+      }
 
-        /* Footer Styles */
-        footer {
-            background-color: #f0dfd8;
-            color: #000;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-            position: relative;
-            bottom: 0;
-        }
+      .navbar a {
+        padding: 8px;
+        font-size: 14px;
+      }
 
-        /* Flexbox Layout for Full-Page Height */
-        .content {
-            flex: 1;
-        }
+      .navbar a img {
+        width: 16px;
+        height: 16px;
+      }
 
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-            padding: 10px;
-        }
+      .order-button {
+        width: 100px;
+      }
+    }
 
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
+    /* Image Hover Effects */
+    .image-wrapper {
+      display: inline-block;
+      margin: 20px 0;
+      transition: box-shadow 0.3s ease;
+    }
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
+    .image-wrapper:hover {
+      box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+    }
 
-        /* Lightbox styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
+    .enlarge-image {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-        }
+    .image-wrapper:hover .enlarge-image {
+      transform: scale(1.05);
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    }
 
-        .lightbox .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    /* Snow Effect Styles */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      font-size: 1em;
+      color: white;
+      opacity: 0.8;
+      user-select: none;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
 
-        /* Snowflake Styles */
-        .snowflake {
-            position: fixed;
-            top: -10px;
-            color: #fff;
-            font-size: 16px;
-            pointer-events: none;
-            z-index: 1000;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(100vh);
-            }
-        }
-    </style>
+    @keyframes fall {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Cover Section -->
-    <div class="cover-section">
-        <div class="logo">
-            <a href="website2.html">
-                <img src="Lora logo with Ice cap.png" alt="Lora Logo" width="200" height="200">
-            </a>
-            <h1 class="website-name">Lora Online Shopping Store</h1>
-        </div>
+
+  <!-- Cover Section -->
+  <div class="cover-section">
+    <div class="logo">
+      <a href="website2.html">
+        <img src="Lora logo with Ice cap.png" alt="Lora Logo" width="100" height="100">
+      </a>
+      <h1 class="website-name">Lora Online Shopping Store</h1>
+      <h2>All Products</h2>
+      <!-- Search Bar Below Products -->
+      <div class="search-container" style="display: flex; justify-content: center; align-items: center; margin: 20px auto; width: 100%; padding: 10px; background-color: #f5f5f5; border-radius: 50px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        <form action="Search Bar.html" method="GET" style="display: flex; flex: 1; width: 100%;">
+          <input type="text" name="query" placeholder="Search for products..." class="search-bar" style="flex: 1; border: none; padding: 15px; font-size: 16px; border-radius: 50px; outline: none; margin-right: 10px; background-color: #ffffff;">
+          <button type="submit" class="search-button" style="background-color: #da1d48; border: none; padding: 15px 20px; border-radius: 50px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">Search</button>
+        </form>
+      </div>
     </div>
+  </div>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="website2.html">
-            <img src="website home page icon.png" alt="Home Icon"> Home
-        </a>
-        <a href="Contact Us.html">
-            <img src="website contact page icon.png" alt="Contact Us Icon"> Contact Us
-        </a>
-        <a href="PC and mobile.html">
-            <img src="website product icon.png" alt="Products Icon"> Products
-        </a>
-        <a href="Gallery 2.html">
-            <img src="website gallery page icon.png" alt="Gallery Icon"> Gallery
-        </a>
-        <a href="About Us.html">
-            <img src="website gallery page icon png.png" alt="About Us Icon"> About Us
-        </a>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="website2.html">
+      <img src="website home page icon.png" alt="Home Icon"> Home
+    </a>
+    <a href="Contact Us.html">
+      <img src="website contact page icon.png" alt="Contact Us Icon"> Contact Us
+    </a>
+    <a href="PC and mobile.html">
+      <img src="website product icon.png" alt="Products Icon"> Products
+    </a>
+    <a href="Gallery 2.html">
+      <img src="website gallery page icon.png" alt="Gallery Icon"> Gallery
+    </a>
+    <a href="About Us.html">
+      <img src="website gallery page icon png.png" alt="About Us Icon"> About Us
+    </a>
+  </div>
+
+  <!-- Product Container with Background -->
+<div class="container">
+  <div class="product">
+    <h1>750ml Customize Glass Water Bottle</h1>
+    <p style="color: Green;">In stock</p>
+    <div class="image-wrapper">
+      <a href="750ml img.jpg" target="_blank">
+        <img src="750ml img.jpg" alt="750ml Customize Glass Water Bottles" class="enlarge-image">
+      </a>
     </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">950</span></p>
+    <button class="description-button" onclick="toggleDescription('desc1')">Description</button>
+    <p id="desc1" class="description" style="display: none;">
+      Free Art Work. Free Wrapping. It is durable, eco-friendly, and perfect for daily use.
+    </p>
+    <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+  </div>
 
-    <!-- Blinking Button -->
-    <a href="PC and mobile.html" id="shop-now-button">Shop Now</a>
-
-    <div class="content">
-        <!-- Gallery -->
-        <div class="gallery">
-            <!-- Gallery images here -->
-            <img src="gallery-image-1.jpg" alt="Gallery Image 1" onclick="openLightbox(this)">
-            <img src="gallery-image-2.jpg" alt="Gallery Image 2" onclick="openLightbox(this)">
-            <img src="gallery-image-3.jpg" alt="Gallery Image 3" onclick="openLightbox(this)">
-             <img src="gallery-image-4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
-            <img src="gallery-image-5.jpg" alt="Gallery Image 5" onclick="openLightbox(this)">
-            <img src="gallery-image-6.jpg" alt="Gallery Image 6" onclick="openLightbox(this)">
-            <img src="gallery-image-7.jpg" alt="Gallery Image 7" onclick="openLightbox(this)">
-            <img src="gallery-image-8.jpg" alt="Gallery Image 8" onclick="openLightbox(this)">
-            <img src="gallery-image-9.jpg" alt="Gallery Image 9" onclick="openLightbox(this)">
-            <img src="gallery-image-10.jpg" alt="Gallery Image 10" onclick="openLightbox(this)">
-            <img src="gallery-image-11.jpg" alt="Gallery Image 11" onclick="openLightbox(this)">
-            <img src="gallery-image-12.jpg" alt="Gallery Image 12" onclick="openLightbox(this)">
-            <img src="gallery-image-13.jpg" alt="Gallery Image 13" onclick="openLightbox(this)">
-            <img src="gallery-image-14.jpg" alt="Gallery Image 14" onclick="openLightbox(this)">
-            <img src="gallery-image-20.jpg" alt="Gallery Image 20" onclick="openLightbox(this)">
-            <img src="gallery-image-21.jpg" alt="Gallery Image 21" onclick="openLightbox(this)">
-            <img src="gallery-image-22.jpg" alt="Gallery Image 22" onclick="openLightbox(this)">
-            <img src="gallery-image-23.jpg" alt="Gallery Image 23" onclick="openLightbox(this)">
-            <img src="gallery-image-24.jpg" alt="Gallery Image 24" onclick="openLightbox(this)">
-            <img src="gallery-image-25.jpg" alt="Gallery Image 25" onclick="openLightbox(this)">
-            <img src="gallery-image-26.jpg" alt="Gallery Image 26" onclick="openLightbox(this)">
-            <img src="gallery-image-27.jpg" alt="Gallery Image 27" onclick="openLightbox(this)">
-        </div>
-
-        <!-- Lightbox -->
-        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-            <span class="close" onclick="closeLightbox()">&times;</span>
-            <img id="lightbox-img" src="" alt="">
-        </div>
+  <div class="product">
+    <h1>375ml Customize Glass Water Bottle</h1>
+    <p style="color: Green;">In stock</p>
+    <div class="image-wrapper">
+      <a href="375mll img.jpg" target="_blank">
+        <img src="375mll img.jpg" alt="375ml Customize Glass Water Bottles" class="enlarge-image">
+      </a>
     </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">800</span></p>
+    <button class="description-button" onclick="toggleDescription('desc2')">Description</button>
+    <p id="desc2" class="description" style="display: none;">
+      Free Art Work. Free Wrapping. Customizable and compact, it’s ideal for those who prefer a smaller, portable bottle.
+    </p>
+    <a href="https://wa.me/94705011212" target="_blank" class="order-button">Order Now</a>
+  </div>
 
-    <div id="contacts">
-        <h2>View More</h2>
-        <div class="contact-icons">
-            <a href="https://www.facebook.com/loraonlineshopping.lk" class="contact-link">
-                <img src="facebook-icon.png" alt="Facebook Icon" class="contact-icon" style="width: 20px; height: 20px;">
-            </a>
-            <a href="https://www.instagram.com/loraonlineshopping.lk/" class="contact-link">
-                <img src="instagram-icon.png" alt="Instagram Icon" class="contact-icon" style="width: 20px; height: 20px;">
-            </a>
-        </div>
+  <div class="product">
+    <h1>600ml Customize Glass Water Bottle</h1>
+    <p style="color: red;">Out Of Stock</p>
+    <div class="image-wrapper">
+      <a href="Plastic bottle 600ml.jpg" target="_blank">
+        <img src="Plastic bottle 600ml.jpg" alt="Plastic Water Bottle" class="enlarge-image">
+      </a>
     </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1300</span></p>
+    <button class="description-button" onclick="toggleDescription('desc3')">Description</button>
+    <p id="desc3" class="description" style="display: none;">
+      The 600ml bottle is a versatile and stylish choice, suitable for various beverages and easy to carry around.
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  </div>
 
-    <footer>
-        &copy; 2024 Lora Online Shopping Store. All rights reserved.
-    </footer>
+  <div class="product">
+    <h1>Customize Mug</h1>
+    <p style="color: red;">Out Of Stock</p>
+    <div class="image-wrapper">
+      <a href="Mug.jpg" target="_blank">
+        <img src="Mug.jpg" alt="Customize Mug" class="enlarge-image">
+      </a>
+    </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1100</span></p>
+    <button class="description-button" onclick="toggleDescription('desc4')">Description</button>
+    <p id="desc4" class="description" style="display: none;">
+      This customizable mug is perfect for enjoying your favorite hot drinks. Personalize it to match your unique taste!
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  </div>
 
-    <!-- Snowflake Effect Script -->
-    <script>
-        function createSnowflake() {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflake.textContent = "❄";
-            document.body.appendChild(snowflake);
+  <div class="product">
+    <h1>Plant Pot</h1>
+    <p style="color: red;">Out Of Stock</p>
+    <div class="image-wrapper">
+      <a href="plant pot.jpg" target="_blank">
+        <img src="plant pot.jpg" alt="Plant Pot" class="enlarge-image">
+      </a>
+    </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">1500</span></p>
+    <button class="description-button" onclick="toggleDescription('desc5')">Description</button>
+    <p id="desc5" class="description" style="display: none;">
+      A stylish, eco-friendly plant pot to add a touch of green to your space. Durable and perfect for indoor plants.
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  </div>
 
-            snowflake.style.left = Math.random() * window.innerWidth + "px";
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-            snowflake.style.opacity = Math.random();
-            snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+  <div class="product">
+    <h1>Customize T-Shirt</h1>
+    <p style="color: blue;">Coming Soon</p>
+    <div class="image-wrapper">
+      <a href="T Shirt.png" target="_blank">
+        <img src="T Shirt.png" alt="Customize T-Shirt" class="enlarge-image">
+      </a>
+    </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2000</span></p>
+    <button class="description-button" onclick="toggleDescription('desc6')">Description</button>
+    <p id="desc6" class="description" style="display: none;">
+      Design your own custom T-shirt! Comfortable, stylish, and available soon in various colors and sizes.
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  </div>
 
-            setTimeout(() => {
-                snowflake.remove();
-            }, 5000);
-        }
+  <div class="product">
+    <h1>Wall Art</h1>
+    <p style="color: blue;">Coming Soon</p>
+    <div class="image-wrapper">
+      <a href="pngwing.com.png" target="_blank">
+        <img src="pngwing.com.png" alt="Wall Art" class="enlarge-image">
+      </a>
+    </div>
+    <p class="price" style="font-size: 20px;">Price: <span style="font-weight: normal;">Rs.</span> <span style="font-weight: bold;">2200</span></p>
+    <button class="description-button" onclick="toggleDescription('desc7')">Description</button>
+    <p id="desc7" class="description" style="display: none;">
+      Unique wall art to elevate your space. Available soon in various designs and sizes for every decor style.
+    </p>
+    <a href="#" class="order-button" style="background-color: grey; cursor: not-allowed;">Order Now</a>
+  </div>
+</div>
+<style>
+  .description-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .description {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+</style>  
+<!-- Footer -->
+  <div class="footer">
+    &copy; 2024 Lora Online Shopping Store. All Rights Reserved.
+  </div>
 
-        setInterval(createSnowflake, 50);
-    </script>
+  <!-- Snow Effect Script -->
+  <script>
+    // Snow Effect
+    document.addEventListener("DOMContentLoaded", function () {
+      const numberOfSnowflakes = 100; // Adjust the number of snowflakes
+      for (let i = 0; i < numberOfSnowflakes; i++) {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.style.left = Math.random() * 100 + "vw";
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+        snowflake.textContent = "❄";
+        document.body.appendChild(snowflake);
+
+        // Remove snowflake after it falls
+        snowflake.addEventListener("animationend", function () {
+          snowflake.remove();
+        });
+      }
+    });
+  </script>
+
+  <script>
+    // Toggle description
+    function toggleDescription(id) {
+      const element = document.getElementById(id);
+      element.style.display = element.style.display === "none" ? "block" : "none";
+    }
+  </script>
 </body>
 
 </html>
