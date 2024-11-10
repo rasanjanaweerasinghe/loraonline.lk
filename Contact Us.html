@@ -23,6 +23,8 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
         }
 
         h1 {
@@ -41,7 +43,6 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            position: relative;
         }
 
         .logo {
@@ -211,6 +212,30 @@
             width: 100%;
             margin-top: auto;
         }
+
+        /* Snowflake Styles */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            color: #ffffff;
+            font-size: 24px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -220,7 +245,7 @@
     <div class="cover-section">
         <div class="logo">
             <a href="website2.html">
-                <img src="Lora logo test png.png" alt="Lora Logo" width="200" height="200">
+                <img src="Lora logo with Ice cap.png" alt="Lora Logo" width="200" height="200">
             </a>
             <h1 class="website-name">Lora Online Shopping Store</h1>
         </div>
@@ -283,6 +308,28 @@
         &copy; 2024 Lora Online Shopping Store. All rights reserved.
     </footer>
 
+    <!-- Snowflake Effect -->
+    <script>
+        // Snowflake Effect Script
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.textContent = "❄";
+            snowflake.style.left = Math.random() * 100 + "vw";
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+
+            document.body.appendChild(snowflake);
+
+            // Remove snowflake after it falls
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        setInterval(createSnowflake, 200);
+    </script>
 </body>
 
 </html>
