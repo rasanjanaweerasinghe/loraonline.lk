@@ -23,6 +23,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         h1 {
@@ -182,7 +183,7 @@
 
         /* Flexbox Layout for Full-Page Height */
         .content {
-            flex: 1; /* Ensures the content section takes up remaining space and allows scrolling */
+            flex: 1;
         }
 
         /* Gallery */
@@ -233,16 +234,36 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+        /* Snowflake Styles */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #fff;
+            font-size: 16px;
+            pointer-events: none;
+            z-index: 1000;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
+        }
     </style>
 </head>
 
 <body>
-
     <!-- Cover Section -->
     <div class="cover-section">
         <div class="logo">
             <a href="website2.html">
-                <img src="Lora logo test png.png" alt="Lora Logo" width="200" height="200">
+                <img src="Lora logo with Ice cap.png" alt="Lora Logo" width="200" height="200">
             </a>
             <h1 class="website-name">Lora Online Shopping Store</h1>
         </div>
@@ -273,10 +294,11 @@
     <div class="content">
         <!-- Gallery -->
         <div class="gallery">
+            <!-- Gallery images here -->
             <img src="gallery-image-1.jpg" alt="Gallery Image 1" onclick="openLightbox(this)">
             <img src="gallery-image-2.jpg" alt="Gallery Image 2" onclick="openLightbox(this)">
             <img src="gallery-image-3.jpg" alt="Gallery Image 3" onclick="openLightbox(this)">
-            <img src="gallery-image-4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
+             <img src="gallery-image-4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
             <img src="gallery-image-5.jpg" alt="Gallery Image 5" onclick="openLightbox(this)">
             <img src="gallery-image-6.jpg" alt="Gallery Image 6" onclick="openLightbox(this)">
             <img src="gallery-image-7.jpg" alt="Gallery Image 7" onclick="openLightbox(this)">
@@ -295,11 +317,6 @@
             <img src="gallery-image-25.jpg" alt="Gallery Image 25" onclick="openLightbox(this)">
             <img src="gallery-image-26.jpg" alt="Gallery Image 26" onclick="openLightbox(this)">
             <img src="gallery-image-27.jpg" alt="Gallery Image 27" onclick="openLightbox(this)">
-            <img src="gallery-image-28.jpg" alt="Gallery Image 28" onclick="openLightbox(this)">
-            <img src="gallery-image-29.jpg" alt="Gallery Image 29" onclick="openLightbox(this)">
-            <img src="gallery-image-30.jpg" alt="Gallery Image 30" onclick="openLightbox(this)">
-            <img src="gallery-image-31.jpg" alt="Gallery Image 31" onclick="openLightbox(this)">
-            <img src="gallery-image-32.jpg" alt="Gallery Image 32" onclick="openLightbox(this)">
         </div>
 
         <!-- Lightbox -->
@@ -319,26 +336,32 @@
                 <img src="instagram-icon.png" alt="Instagram Icon" class="contact-icon" style="width: 20px; height: 20px;">
             </a>
         </div>
-        
-        
-        
     </div>
 
     <footer>
-        &copy; 2024 Lora Online Shopping Store. All Rights Reserved.
+        &copy; 2024 Lora Online Shopping Store. All rights reserved.
     </footer>
 
+    <!-- Snowflake Effect Script -->
     <script>
-        function openLightbox(element) {
-            document.getElementById("lightbox").style.display = "flex";
-            document.getElementById("lightbox-img").src = element.src;
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.textContent = "❄";
+            document.body.appendChild(snowflake);
+
+            snowflake.style.left = Math.random() * window.innerWidth + "px";
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
         }
 
-        function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
-        }
+        setInterval(createSnowflake, 50);
     </script>
-
 </body>
 
 </html>
