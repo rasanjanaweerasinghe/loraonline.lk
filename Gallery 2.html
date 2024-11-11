@@ -183,8 +183,9 @@
 
         /* Flexbox Layout for Full-Page Height */
         .content {
-            flex: 1;
+            flex: 1; /* Ensures the content section takes up remaining space and allows scrolling */
         }
+
 
         /* Gallery */
         .gallery {
@@ -341,7 +342,20 @@
     <footer>
         &copy; 2024 Lora Online Shopping Store. All rights reserved.
     </footer>
+    <script>
+        function openLightbox(element) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = element.src;
+        }
 
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
     <!-- Snowflake Effect Script -->
     <script>
         function createSnowflake() {
