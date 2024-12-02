@@ -230,6 +230,50 @@
         transform: translateY(100vh);
       }
     }
+
+      /* Blinking Button */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .blinking-button {
+            margin: 20px auto;
+            padding: 15px 30px;
+            background-color: #db1d49;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            animation: blink 1s infinite;
+        }
+
+        .blinking-button:hover {
+            background-color: #c10a3b;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #f0dfd8;
+            border-top: 1px solid #ddd;
+            padding: 10px 20px;
+            text-align: center;
+            color: #000000;
+            margin-top: auto;
+        }
+        
   </style>
 </head>
 
@@ -271,6 +315,10 @@
       <img src="website gallery page icon png.png" alt="About Us Icon"> About Us
     </a>
   </div>
+<!-- Blinking Button -->
+<div style="text-align: center;">
+  <a href="Calendar download.html" class="blinking-button">Download New Year Calendar</a>
+</div>
 
 <!-- Product Container with Background -->
 <div class="container">
@@ -417,7 +465,9 @@
     font-size: 16px;
     margin-top: 10px;
   }
+  
 </style>  
+
 <!-- Footer -->
   <div class="footer">
     &copy; 2024 Lora Online Shopping Store. All Rights Reserved.
