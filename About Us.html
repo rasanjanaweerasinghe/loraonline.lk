@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lora Online Shopping Store</title>
+    <title>Lora Store</title>
     <style>
          /* Font Import */
          @font-face {
@@ -19,20 +19,20 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f6f7f9;
+            background-color: #fca385;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
         h1 {
-            color: #db1d49;
+            color: #6c5aca;
         }
 
         /* Cover Section with Glowing Effect */
         .cover-section {
             background-image: url("Flower cover.png");
-            background-color: #f0dfd8;
+            background-color: #fca385;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -49,7 +49,7 @@
         }
 
         .website-name {
-            color: #db1d49;
+            color: #6c5aca;
             font-size: 24px;
             margin-top: 10px;
         }
@@ -61,11 +61,11 @@
 
         @keyframes glow {
             0% {
-                filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
+                filter: drop-shadow(0 0 5px #fca385);
                 transform: scale(1);
             }
             100% {
-                filter: drop-shadow(0 0 15px #61c5b7);
+                filter: drop-shadow(0 0 15px #a291fd);
                 transform: scale(1.05);
             }
         }
@@ -119,7 +119,7 @@
             left: 130px;
             z-index: 9999;
             padding: 10px 20px;
-            background-color: #da1d48;
+            background-color: #6c5aca;
             color: #fff;
             font-size: 20px;
             font-weight: bold;
@@ -167,7 +167,7 @@
 
         /* Footer Styles */
         .footer {
-            background-color: #f0dfd8;
+            background-color: #fca385;
             color: #000;
             text-align: center;
             padding: 10px 0;
@@ -175,29 +175,7 @@
             bottom: 0;
             width: 100%;
         }
-/* Snowflake Styles */
-.snowflake {
-            color: #ffffff;
-            font-size: 24px;
-            position: fixed;
-            top: -10px;
-            z-index: 1000;
-            user-select: none;
-            pointer-events: none;
-            animation: fall linear infinite;
-        }
 
-        @keyframes fall {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(100vh);
-                opacity: 0.5;
-            }
-        }
         /* Main Container to hold all content and allow scrolling */
         .content {
             flex: 1 0 auto; /* Ensure the content section takes up remaining space and allows scrolling */
@@ -211,9 +189,9 @@
     <div class="cover-section">
         <div class="logo">
             <a href="website2.html">
-                <img src="Lora logo with Ice cap.png" alt="Lora Logo" width="200" height="200">
+                <img src="Lora logo 2025.png" alt="Lora Logo" width="300" height="170">
             </a>
-            <h1 class="website-name">Lora Online Shopping Store</h1>
+            <h1 class="website-name">About Us</h1>
         </div>
     </div>
 
@@ -252,27 +230,11 @@
             </button>
         </div>
     </div>
- <!-- Snowfall Effect -->
- <script>
-    const createSnowflake = () => {
-        const snowflake = document.createElement("div");
-        snowflake.classList.add("snowflake");
-        snowflake.textContent = "❄";
-        snowflake.style.left = Math.random() * 100 + "vw";
-        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-        document.body.appendChild(snowflake);
 
-        setTimeout(() => {
-            snowflake.remove();
-        }, 5000);
-    };
-
-    setInterval(createSnowflake, 200);
-</script>
-    <!-- Footer -->
-    <div class="footer">
-        <p>© 2024 Lora Online Shopping Store. All rights reserved.</p>
-    </div>
+     <!-- Footer -->
+     <footer class="footer">
+        &copy; 2025 Lora Store. All rights reserved.
+    </footer>
 
 </body>
 
