@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lora Online Shopping Store</title>
+    <title>Contact Us</title>
     <style>
         /* Font Import */
         @font-face {
@@ -23,12 +23,10 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
         }
 
         h1 {
-            color: #db1d49;
+            color: #6c5aca;
         }
 
         /* Cover Section with Glowing Effect */
@@ -43,6 +41,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            position: relative;
         }
 
         .logo {
@@ -50,7 +49,7 @@
         }
 
         .website-name {
-            color: #db1d49;
+            color: #6c5aca;
             font-size: 24px;
             margin-top: 10px;
         }
@@ -62,12 +61,12 @@
 
         @keyframes glow {
             0% {
-                filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
+                filter: drop-shadow(0 0 5px #fca385);
                 transform: scale(1);
             }
 
             100% {
-                filter: drop-shadow(0 0 15px #61c5b7);
+                filter: drop-shadow(0 0 15px #a291fd);
                 transform: scale(1.05);
             }
         }
@@ -124,7 +123,7 @@
             left: 130px;
             z-index: 9999;
             padding: 10px 20px;
-            background-color: #da1d48;
+            background-color: #6c5aca;
             color: #fff;
             font-size: 20px;
             font-weight: bold;
@@ -212,30 +211,6 @@
             width: 100%;
             margin-top: auto;
         }
-
-        /* Snowflake Styles */
-        .snowflake {
-            position: fixed;
-            top: -10px;
-            z-index: 1000;
-            user-select: none;
-            pointer-events: none;
-            color: #ffffff;
-            font-size: 24px;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 
@@ -245,9 +220,9 @@
     <div class="cover-section">
         <div class="logo">
             <a href="website2.html">
-                <img src="Lora logo with Ice cap.png" alt="Lora Logo" width="200" height="200">
+                <img src="Lora logo 2025.png" alt="Lora Logo" width="300" height="170">
             </a>
-            <h1 class="website-name">Lora Online Shopping Store</h1>
+            <h1 class="website-name">Contact Us</h1>
         </div>
     </div>
 
@@ -284,7 +259,7 @@
             <a href="https://wa.me/94705011212?text=Hello%21%20I%20have%20a%20question." class="contact-link">+94705011212</a>
         </p>
         <p>
-            <a href="https://www.facebook.com/loraonlineshopping.lk" class="contact-link">
+            <a href="https://web.facebook.com/lorastore.lk/" class="contact-link">
                 <img src="facebook-icon.png" alt="Facebook Icon" class="contact-icon"> Visit us on Facebook
             </a>
         </p>
@@ -305,31 +280,9 @@
 
     <!-- Footer -->
     <footer class="footer">
-        &copy; 2024 Lora Online Shopping Store. All rights reserved.
+        &copy; 2025 Lora Store. All rights reserved.
     </footer>
 
-    <!-- Snowflake Effect -->
-    <script>
-        // Snowflake Effect Script
-        function createSnowflake() {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflake.textContent = "❄";
-            snowflake.style.left = Math.random() * 100 + "vw";
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-            snowflake.style.opacity = Math.random();
-            snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
-
-            document.body.appendChild(snowflake);
-
-            // Remove snowflake after it falls
-            setTimeout(() => {
-                snowflake.remove();
-            }, 5000);
-        }
-
-        setInterval(createSnowflake, 200);
-    </script>
 </body>
 
 </html>
