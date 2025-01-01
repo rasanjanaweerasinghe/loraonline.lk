@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lora Online Shopping Store</title>
+    <title>Gallery</title>
     <style>
         /* Font Import */
         @font-face {
@@ -23,11 +23,10 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            overflow-x: hidden;
         }
 
         h1 {
-            color: #db1d49;
+            color: #6c5aca;
         }
 
         /* Cover Section with Glowing Effect */
@@ -50,7 +49,7 @@
         }
 
         .website-name {
-            color: #db1d49;
+            color: #6c5aca;
             font-size: 24px;
             margin-top: 10px;
         }
@@ -62,12 +61,12 @@
 
         @keyframes glow {
             0% {
-                filter: drop-shadow(0 0 5px rgba(219, 29, 73, 0.6));
+                filter: drop-shadow(0 0 5px #fca385);
                 transform: scale(1);
             }
 
             100% {
-                filter: drop-shadow(0 0 15px #61c5b7);
+                filter: drop-shadow(0 0 15px #a291fd);
                 transform: scale(1.05);
             }
         }
@@ -124,7 +123,7 @@
             left: 130px;
             z-index: 9999;
             padding: 10px 20px;
-            background-color: #da1d48;
+            background-color: #6c5aca;
             color: #fff;
             font-size: 20px;
             font-weight: bold;
@@ -186,7 +185,6 @@
             flex: 1; /* Ensures the content section takes up remaining space and allows scrolling */
         }
 
-
         /* Gallery */
         .gallery {
             display: grid;
@@ -235,38 +233,18 @@
             font-weight: bold;
             cursor: pointer;
         }
-
-        /* Snowflake Styles */
-        .snowflake {
-            position: fixed;
-            top: -10px;
-            color: #fff;
-            font-size: 16px;
-            pointer-events: none;
-            z-index: 1000;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(100vh);
-            }
-        }
     </style>
 </head>
 
 <body>
+
     <!-- Cover Section -->
     <div class="cover-section">
         <div class="logo">
             <a href="website2.html">
-                <img src="Lora logo with Ice cap.png" alt="Lora Logo" width="200" height="200">
+                <img src="Lora logo 2025.png" alt="Lora Logo" width="300" height="170">
             </a>
-            <h1 class="website-name">Lora Online Shopping Store</h1>
+            <h1 class="website-name">Gallery</h1>
         </div>
     </div>
 
@@ -295,11 +273,10 @@
     <div class="content">
         <!-- Gallery -->
         <div class="gallery">
-            <!-- Gallery images here -->
             <img src="gallery-image-1.jpg" alt="Gallery Image 1" onclick="openLightbox(this)">
             <img src="gallery-image-2.jpg" alt="Gallery Image 2" onclick="openLightbox(this)">
             <img src="gallery-image-3.jpg" alt="Gallery Image 3" onclick="openLightbox(this)">
-             <img src="gallery-image-4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
+            <img src="gallery-image-4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
             <img src="gallery-image-5.jpg" alt="Gallery Image 5" onclick="openLightbox(this)">
             <img src="gallery-image-6.jpg" alt="Gallery Image 6" onclick="openLightbox(this)">
             <img src="gallery-image-7.jpg" alt="Gallery Image 7" onclick="openLightbox(this)">
@@ -318,6 +295,11 @@
             <img src="gallery-image-25.jpg" alt="Gallery Image 25" onclick="openLightbox(this)">
             <img src="gallery-image-26.jpg" alt="Gallery Image 26" onclick="openLightbox(this)">
             <img src="gallery-image-27.jpg" alt="Gallery Image 27" onclick="openLightbox(this)">
+            <img src="gallery-image-28.jpg" alt="Gallery Image 28" onclick="openLightbox(this)">
+            <img src="gallery-image-29.jpg" alt="Gallery Image 29" onclick="openLightbox(this)">
+            <img src="gallery-image-30.jpg" alt="Gallery Image 30" onclick="openLightbox(this)">
+            <img src="gallery-image-31.jpg" alt="Gallery Image 31" onclick="openLightbox(this)">
+            <img src="gallery-image-32.jpg" alt="Gallery Image 32" onclick="openLightbox(this)">
         </div>
 
         <!-- Lightbox -->
@@ -330,18 +312,22 @@
     <div id="contacts">
         <h2>View More</h2>
         <div class="contact-icons">
-            <a href="https://www.facebook.com/loraonlineshopping.lk" class="contact-link">
+            <a href="https://web.facebook.com/lorastore.lk" class="contact-link">
                 <img src="facebook-icon.png" alt="Facebook Icon" class="contact-icon" style="width: 20px; height: 20px;">
             </a>
             <a href="https://www.instagram.com/loraonlineshopping.lk/" class="contact-link">
                 <img src="instagram-icon.png" alt="Instagram Icon" class="contact-icon" style="width: 20px; height: 20px;">
             </a>
         </div>
+        
+        
+        
     </div>
 
     <footer>
-        &copy; 2024 Lora Online Shopping Store. All rights reserved.
+        &copy; 2025 Lora Store. All Rights Reserved.
     </footer>
+
     <script>
         function openLightbox(element) {
             document.getElementById("lightbox").style.display = "flex";
@@ -353,29 +339,6 @@
         }
     </script>
 
-</body>
-
-</html>
-    <!-- Snowflake Effect Script -->
-    <script>
-        function createSnowflake() {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflake.textContent = "❄";
-            document.body.appendChild(snowflake);
-
-            snowflake.style.left = Math.random() * window.innerWidth + "px";
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-            snowflake.style.opacity = Math.random();
-            snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
-
-            setTimeout(() => {
-                snowflake.remove();
-            }, 5000);
-        }
-
-        setInterval(createSnowflake, 50);
-    </script>
 </body>
 
 </html>
